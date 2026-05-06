@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Login</title>
+    <title>Life is Strange | Login</title>
 
     <script src="./js/sessao.js"></script>
 
@@ -18,36 +18,29 @@
 <body>
 
     <!--Header-->
+    <section class="tela_cadastro">
+        <header>
+            <nav class="barra-navegacao">
+                <img src="./assets/imgs/LOGOLS-removebg-preview 1.png" alt="Logo do jogo">
+                <ul class="topicos-barra">
+                    <li><a href="./index.html" class="topico_home" target="_self">Inicio</a></li>
+                    <li><a href="./index.html" class="topico_contexto" target="_self">Contexto</a></li>
+                    <li><a href="./index.html" class="topico_historia" target="_self">História</a></li>
+                    <li><a href="./index.html" class="topico_personagens" target="_self">Personagens</a></li>
+                    <li><a href="./index.html" class="topico_reflexao" target="_self">Reflexão</a></li>
 
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
-                <li>
-                    <a href="simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li class="agora">
-                    <a href="#">Login</a>
-                </li>
-                <li>
-                    <a href="cadastro.html">Cadastro</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+                </ul>
+            </nav>
+        </header>
 
 
-    <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
+        <div class="login">
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
             </div>
-        </div>
-        <div class="container">
+
             <div class="card card-login">
                 <h2>Olá de volta!</h2>
                 <div class="formulario">
@@ -59,7 +52,11 @@
                         <span>Senha:</span>
                         <input id="senha_input" type="password" placeholder="******">
                     </div>
-                    <button class="botao" onclick="entrar()">Entrar</button>
+                    <div class="div_btn_entrar"> <button class="botao" onclick="entrar()">Entrar</button>
+                        <a href="./cadastro.html" class="link_login">Não possui login? Realize seu
+                            Cadastro!</a>
+                    </div>
+
                 </div>
 
                 <div id="div_aguardar" class="loading-div">
@@ -69,17 +66,7 @@
                 <div id="div_erros_login"></div>
             </div>
         </div>
-    </div>
-
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
-        </div>
-    </div>
-    <!--footer fim-->
-
+    </section>
 </body>
 
 </html>
@@ -130,8 +117,8 @@
                     sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
+                        window.location = "../dashboard/dashboard.html";
+                    }, 100); // apenas para exibir o loading
 
                 });
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AquaTech | Cadastro</title>
+  <title>Life is Strange | Cadastro</title>
 
   <script src="./js/sessao.js"></script>
 
@@ -17,6 +17,8 @@
 
 <body onload="listar()">
   <!--header inicio-->
+
+  <!--
   <div class="header">
     <div class="container">
       <h1 class="titulo">AquaTech</h1>
@@ -37,61 +39,68 @@
       </ul>
     </div>
   </div>
-  <!--header fim-->
+  -->
+  <section class="tela_cadastro">
+    <header>
+      <nav class="barra-navegacao">
+        <img src="./assets/imgs/LOGOLS-removebg-preview 1.png" alt="Logo do jogo">
+        <ul class="topicos-barra">
+          <li><a href="./index.html" class="topico_home">Inicio</a></li>
+          <li><a href="./index.html" class="topico_contexto">Contexto</a></li>
+          <li><a href="./index.html" class="topico_historia">História</a></li>
+          <li><a href="./index.html" class="topico_personagens">Personagens</a></li>
+          <li><a href="./index.html" class="topico_reflexao">Reflexão</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--header fim-->
 
-  <div class="login">
-    <div class="alerta_erro">
-      <div class="card_erro" id="cardErro">
-        <span id="mensagem_erro"></span>
+    <div class="login">
+      <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+          <span id="mensagem_erro"></span>
+        </div>
       </div>
-    </div>
-    <div class="container">
+
       <div class="card card-cadastro">
         <h2>Bem-vindo!</h2>
         <div class="formulario">
           <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
+                         Para inserir mais um div_inputs, copie uma das inputs abaixo.
                          Assim que inserir vá para o script abaixo.
                      -->
-          <div class="campo">
-            <span>Código de ativação:</span>
-            <input id="codigo_input" type="text" placeholder="Insira aqui seu código" />
-          </div>
-          <div class="campo">
+
+          <div class="div_inputs">
             <span>Nome:</span>
             <input id="nome_input" type="text" placeholder="Seu nome" />
           </div>
-          <div class="campo">
+          <div class="div_inputs">
             <span>E-mail:</span>
             <input id="email_input" type="text" placeholder="meuemail@provedor.com" />
           </div>
-          <div class="campo">
+          <div class="div_inputs">
             <span>Senha:</span>
             <input id="senha_input" type="password" placeholder="******" />
           </div>
-          <div class="campo">
+          <div class="div_inputs">
             <span>Confirmação da Senha:</span>
             <input id="confirmacao_senha_input" type="password" placeholder="******" />
           </div>
-          <button class="botao" onclick="cadastrar()">Cadastrar</button>
-        </div>
-        <div id="div_aguardar" class="loading-div">
-          <img src="./assets/circle-loading.gif" id="loading-gif" />
+          <div class="div_btn_entrar">
+            <button class="botao" onclick="cadastrar()">Cadastrar</button>
+            <a href="./login.html" class="link_login">Já possui cadastro? Realize seu
+              login!</a>
+          </div>
+          <div id="div_aguardar" class="loading-div">
+            <img src="./assets/circle-loading.gif" id="loading-gif" />
+          </div>
+
+          <div id="div_erros_login"></div>
         </div>
 
-        <div id="div_erros_login"></div>
       </div>
-    </div>
-  </div>
+  </section>
 
-  <!--footer inicio-->
-  <div class="footer">
-    <div class="container">
-      <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-      <span class="version">v1.0.0</span>
-    </div>
-  </div>
-  <!--footer fim-->
 </body>
 
 </html>
@@ -110,20 +119,20 @@
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var codigoVar = codigo_input.value;
-    var idEmpresaVincular
+   // var codigoVar = codigo_input.value;
+    // var idEmpresaVincular
 
-    // Verificando se há algum campo em branco
+    // Verificando se há algum div_inputs em branco
     if (
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
-      confirmacaoSenhaVar == "" ||
-      codigoVar == ""
+      confirmacaoSenhaVar == "" 
+    //  codigoVar == ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+        "(Mensagem de erro para todos os div_inputss em branco)";
 
       finalizarAguardar();
       return false;
@@ -132,7 +141,7 @@
     }
 
     // Verificando se o código de ativação é de alguma empresa cadastrada
-    for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
+    /*for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
       if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
         idEmpresaVincular = listaEmpresasCadastradas[i].id
         console.log("Código de ativação válido.");
@@ -142,7 +151,7 @@
         mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
         finalizarAguardar();
       }
-    }
+    } */
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
@@ -155,8 +164,8 @@
         // Agora vá para o arquivo routes/usuario.js
         nomeServer: nomeVar,
         emailServer: emailVar,
-        senhaServer: senhaVar,
-        idEmpresaVincularServer: idEmpresaVincular
+        senhaServer: senhaVar
+        // idEmpresaVincularServer: idEmpresaVincular
       }),
     })
       .then(function (resposta) {
