@@ -34,3 +34,38 @@ insert into usuario (nome, email,senha) values ('Giulia', 'giulia@gmail.com','12
 insert into usuario (nome, email,senha) values ('Caua', 'Caua@gmail.com','abcdef');
 
 select * from  usuario;
+
+CREATE TABLE pergunta (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    pergunta VARCHAR(255),
+    categoria VARCHAR(50)
+);
+
+CREATE TABLE alternativa (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    fkPergunta INT,
+    texto VARCHAR(255),
+    pontuacao INT,
+    perfil VARCHAR(50),
+
+    FOREIGN KEY (fkPergunta)
+        REFERENCES pergunta(id)
+);
+
+CREATE TABLE resposta (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    fkUsuario INT,
+    fkPergunta INT,
+    fkAlternativa INT,
+    dataResposta DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (fkUsuario)
+        REFERENCES usuario(id),
+
+    FOREIGN KEY (fkPergunta)
+        REFERENCES pergunta(id),
+
+    FOREIGN KEY (fkAlternativa)
+        REFERENCES alternativa(id)
+);
+
