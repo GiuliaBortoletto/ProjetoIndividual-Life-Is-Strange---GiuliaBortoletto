@@ -162,31 +162,251 @@
         </div>
     </main>
 </section>
+
+<section class="sessao_perguntas" id="tela_5" style="display: none;">
+        <header>
+        <h1 class="titulo_header">Escolhas Dificeis</h1>
+        <h3>No final parece facil...</h3>
+    </header>
+    <main id="main_5" >
+        <div class="div_pergunta">
+        <h1 class="titulo_pergunta"></h1>
+        <h3 class="pergunta">Mas você parou mesmo para pensar sobre a sua ultima resposta?</h3>
+        </div>
+        <div class="div_opções_finais">
+            <form action="" method="post" onsubmit="return avancar()">
+                <fieldset class="pergunta_final">
+
+                <div class="opcoes_finais">
+            <div class="opcao_finalA"> 
+            <input type="radio" name="alternativa" id="Emocao" value="A">
+            <label for="A" class="label_emocao">“Escolho salvar a pessoa que mais amo.”</label>
+            </div>
+            <div class="opcao_finalB">
+            <input type="radio" name="alternativa" id="Razao" value="B">
+            <label for="B" class="label_razao">“Tomaria a decisão mais difícil sem hesitar.”</label>
+            </div>
+                </div>
+           <div class="div_btn_enviar">
+            <button type="submit" >Enviar</button>
+        </div>
+         
+        </fieldset>    
+        </form>
+        </div>
+    </main>
+</section>
     
 </body>
 </html>
 <script>
 
+let respostas = [];
+
 function avancar() {
+    let erros = false;
+
     if(tela_1.style.display == 'flex') { 
+
+        let alternativa = 0;
+        if(A1.checked) {
+            alternativa = 1;
+        } 
+        else if (B1.checked) {
+            alternativa = 2;
+        }
+        else if (C1.checked) {
+            alternativa = 3;
+        }
+        else if (D1.checked) {
+            alternativa = 4;
+        } else {
+            alert('Selecione uma das alternativas!');
+            erros = true;
+        }
+
+        if(erros == false) {
+        respostas.push({
+        fkPergunta: 1,
+        fkAlternativa: alternativa
+    })
+        }
+        console.log(respostas);
+      
     tela_1.style.display = 'none';
      tela_2.style.display = 'flex';
      return false;}
    
      if(tela_2.style.display == 'flex') { 
+
+ let alternativa = 0;
+        if(A2.checked) {
+            alternativa = 5;
+        } 
+        else if (B2.checked) {
+            alternativa = 6;
+        }
+        else if (C2.checked) {
+            alternativa = 7;
+        }
+        else if (D2.checked) {
+            alternativa = 8;
+        } else {
+            alert('Selecione uma das alternativas!');
+            erros = true;
+        }
+
+        if(erros == false) {
+        respostas.push({
+        fkPergunta:2,
+        fkAlternativa: alternativa
+    })
+     console.log(respostas);
+        }
+
+
     tela_2.style.display = 'none';
      tela_3.style.display = 'flex';
      return false;}   
 
      if(tela_3.style.display == 'flex') { 
+
+ let alternativa = 0;
+        if(A3.checked) {
+            alternativa = 9;
+        } 
+        else if (B3.checked) {
+            alternativa = 10;
+        }
+        else if (C3.checked) {
+            alternativa = 11;
+        }
+        else if (D3.checked) {
+            alternativa = 12;
+        } else {
+            alert('Selecione uma das alternativas!');
+            erros = true;
+        }
+
+        if(erros == false) {
+        respostas.push({
+        fkPergunta:3,
+        fkAlternativa: alternativa
+    })
+     console.log(respostas);
+        }
+
     tela_3.style.display = 'none';
      tela_4.style.display = 'flex';
      return false;}
 
      if(tela_4.style.display == 'flex') { 
-    window.location = "./login.html";
+
+         let alternativa = 0;
+        if(A4.checked) {
+            alternativa = 13;
+        } 
+        else if (B4.checked) {
+            alternativa = 14;
+        }
+        else if (C4.checked) {
+            alternativa = 15;
+        }
+        else if (D4.checked) {
+            alternativa = 16;
+        } else {
+            alert('Selecione uma das alternativas!');
+            erros = true;
+        }
+
+        if(erros == false) {
+        respostas.push({
+        fkPergunta:4,
+        fkAlternativa: alternativa
+    })
+     console.log(respostas);
+        }
+
+    tela_4.style.display = 'none';
+     tela_5.style.display = 'flex';
      return false;}
+
+      if(tela_5.style.display == 'flex') { 
+
+         let alternativa = 0;
+        if(Razao.checked) {
+            alternativa = 17;
+        } 
+        else if (Emocao.checked) {
+            alternativa = 18;
+        }
+         else {
+            alert('Selecione uma das alternativas!');
+            erros = true;
+        }
+
+         if(erros == false) {
+
+        respostas.push({
+            fkPergunta: 5,
+            fkAlternativa: alternativa
+        });
+
+        console.log(respostas);
+
+        console.log(sessionStorage.ID_USUARIO);
+
+        fetch("/quiz/responder", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                fkUsuario: sessionStorage.ID_USUARIO,
+                respostas: respostas
+            }),
+        })
+        .then(function(resposta) {
+
+            console.log("dados enviados");
+
+            window.location = "./dashboard/dashboard.html";
+
+        })
+        .catch(function(erro) {
+
+            console.log(erro);
+
+        });
+
+    }
+     }
+    return false;
+     
 
 }
 
+/*
+function responder(pergunta,alternativa) {
+
+    respostas.push({
+        fkPergunta:pergunta,
+        fkAlternativa: alternativa
+    })
+
+     fetch("/quiz/responder", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        fkUsuario: sessionStorage.ID_USUARIO,
+        respostas: respostas
+        // idEmpresaVincularServer: idEmpresaVincular
+      }),
+    })
+}
+*/
 </script>

@@ -68,4 +68,26 @@ main {
     display: flex;
     flex-direction: column;
     gap:20px;
+    
+}
+
+.pergunta_final {
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes_finais {
+       display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.div_opções_finais {
+display: flex;
+}
+
+.opcao_final {
+     display: flex;
+    align-items: center;
+    gap: 8px;
 }
