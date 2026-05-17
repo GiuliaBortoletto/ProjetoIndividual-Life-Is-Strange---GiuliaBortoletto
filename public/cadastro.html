@@ -109,6 +109,7 @@
 
   // Array para armazenar empresas cadastradas para validação de código de ativação 
   let listaEmpresasCadastradas = [];
+  let listaCaracteresEspeciais = ["!", "@", "#", "$", "%", "*"];
 
   function cadastrar() {
     // aguardar();
@@ -119,9 +120,16 @@
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
+    var temCaractereEspecial = false;
+    
    // var codigoVar = codigo_input.value;
     // var idEmpresaVincular
-
+ for(let i = 0; i < listaCaracteresEspeciais.length; i++) {
+      if(senhaVar.includes(listaCaracteresEspeciais[i])) {
+        temCaractereEspecial = true;
+        break;
+      }
+    }
     // Verificando se há algum div_inputs em branco
     if (
       nomeVar == "" ||
@@ -132,13 +140,58 @@
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os div_inputss em branco)";
+        "Todos os campos devem estar preenchidos!";
+
+      finalizarAguardar();
+      return false;
+    }
+   else if (nomeVar.length < 3 ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "O nome deve possuir no minimo 3 caracteres";
+
+      finalizarAguardar();
+      return false;
+    } 
+
+ else if (emailVar.includes('@') != true) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "O seu email precisa incluir de um simbolo '@' ";
+
+      finalizarAguardar();
+      return false;
+    } 
+
+    else if (senhaVar.length < 6) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "A senha precisa ter no minimo 6 caracteres";
+      finalizarAguardar();
+      return false;
+    } 
+
+    else if (senhaVar != confirmacaoSenhaVar) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "A senha informada na confirmação não coencide com a senha informada";
+
+      finalizarAguardar();
+      return false;
+    } 
+
+
+   else if(temCaractereEspecial == false) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "A senha precisa conter no minimo um caractere especial! ('!', '@', '#', '$', '%','*')";
 
       finalizarAguardar();
       return false;
     } else {
       setInterval(sumirMensagem, 5000);
     }
+    
 
     // Verificando se o código de ativação é de alguma empresa cadastrada
     /*for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
@@ -178,7 +231,7 @@
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
           setTimeout(() => {
-            window.location = "quiz.html";
+            window.location = "login.html";
           }, "2000");
 
           limparFormulario();
