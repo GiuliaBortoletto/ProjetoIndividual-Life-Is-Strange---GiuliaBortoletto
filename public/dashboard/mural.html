@@ -20,34 +20,52 @@
 </head>
 
 <body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
+<header>
 
+      <nav class="barra-navegacao">
+        <img src="../assets/imgs/LOGOLS-removebg-preview 1.png" alt="Logo do jogo">
+        <ul class="topicos-barra">
+          <li><a href="#" class="topico_home">Inicio</a></li>
+          <li><a href="#" class="topico_contexto">Contexto</a></li>
+          <li><a href="#" class="topico_historia">História</a></li>
+          <li><a href="#" class="topico_personagens">Personagens</a></li>
+          <li><a href="#" class="topico_reflexao">Reflexão</a></li>
+          <li><a href="./login.html" class="topico_entrar">Entrar</a></li>
+        </ul>
+      </nav>
+
+    </header>
     <div class="janela">
-
+        
 
         <div class="header-left">
 
-            <h1>AquaTech</h1>
+         
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
 
+            
             <div class="btn-nav-white">
                 <a href="cards.html">
-                    <h3>Aquários</h3>
+                    <h3>Final escolhido</h3>
                 </a>
             </div>
 
             <div class="btn-nav-white">
                 <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
+                    <h3>Dashboard</h3>
                 </a>
             </div>
 
             <div class="btn-nav">
-                <h3>Mural de Avisos</h3>
+                <a href="./mural.html"></a>
+                <h3>Fórum</h3>
             </div>
 
+            <br>
+            <br>
             <div class="btn-logout" onclick="limparSessao()">
                 <h3>Sair</h3>
             </div>
@@ -65,20 +83,20 @@
                     <div class="div-form">
                         <form id="form_postagem" method="post" onsubmit="return publicar()">
                             <label>
-                                Título:
                                 <br>
-                                <input name="titulo" id="titulo" maxlength="100" type="text">
+                                <input name="titulo" id="titulo" maxlength="100" type="text" placeholder="Título:">
                             </label>
                             <br>
                             <br>
                             <label>
-                                Descrição (máximo de 250 caracteres):
+
                                 <br>
-                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"
+                                    placeholder=" Comentário:"></textarea> 
                             </label>
-                            <br>
-                            <br>
-                            <button>Enviar</button>
+                            <div class="div_btn_enviar"><button>Enviar</button></div>
+                            
+                           
                         </form>
                     </div>
                     <h1>Fórum</h1>
@@ -99,7 +117,7 @@
 </html>
 
 <script>
-    
+
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     function limparFormulario() {
@@ -194,7 +212,7 @@
 
                         // criando e manipulando elementos do HTML via JavaScript
                         var divPublicacao = document.createElement("div");
-                      //  var spanID = document.createElement("span");
+                        //  var spanID = document.createElement("span");
                         var spanTitulo = document.createElement("span");
                         var spanNome = document.createElement("span");
                         var divDescricao = document.createElement("div");
@@ -203,7 +221,7 @@
                         var btnDeletar = document.createElement("button");
 
 
-                       // spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
+                        // spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
                         spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
                         spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
@@ -211,7 +229,7 @@
                         btnDeletar.innerHTML = "Deletar";
 
                         divPublicacao.className = "publicacao";
-                      //  spanTitulo.id = "inputNumero" + publicacao.idAviso;
+                        //  spanTitulo.id = "inputNumero" + publicacao.idAviso;
                         spanNome.className = "publicacao-nome";
                         spanTitulo.className = "publicacao-titulo";
                         divDescricao.className = "publicacao-descricao";
@@ -226,7 +244,7 @@
                         btnDeletar.id = "btnDeletar" + publicacao.idAviso;
                         btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
 
-                     //   divPublicacao.appendChild(spanID);
+                        //   divPublicacao.appendChild(spanID);
                         divPublicacao.appendChild(spanNome);
                         divPublicacao.appendChild(spanTitulo);
                         divPublicacao.appendChild(divDescricao);

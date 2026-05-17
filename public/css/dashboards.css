@@ -1,12 +1,73 @@
 /* pagina mural */
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: "Love Ya Like A Sister", cursive;
+   background-color: #B8A68A;
+    overflow-x: hidden;
 }
+
+
+
+.barra-navegacao {
+    width: 100%;
+    height: 70px;
+    background-image: linear-gradient(to right, #232A8C, #4A2E24);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    justify-content: space-between;
+}
+
+.topicos-barra {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: white;
+    font-size: 26px;
+    list-style: none;
+    margin-right: 50px;
+}
+
+.topicos-barra a {
+ text-decoration: none;
+ color: white;
+}
+
+.topicos-barra li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn_entrar {
+    background-image: linear-gradient(to right, #232a8c6f, #4a2e2460);
+    color: white;
+    padding: 10px;
+    width: 170px;
+    height: 50px;
+    font-size: 26px;
+    border: solid 1px #ffff;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-top: 70px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.btn_entrar:hover {
+    background-image: linear-gradient(to right, #232a8cd1, #4a2e24cb);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
 
 .label-captura {
   display: flex;
@@ -16,17 +77,18 @@ body {
 .dash-right .avisos {
   width: 100%;
   color: rgb(216, 216, 216);
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: "Love Ya Like A Sister", cursive;
+   
 }
 
 .dash-right .avisos .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+ 
 }
 
 .dash-right .avisos .container .div-form {
-  width: 95%;
+  width: 100%;
 }
 
 .dash-right .avisos .container .div-form #form_postagem {
@@ -38,41 +100,51 @@ body {
 }
 
 .dash-right .avisos .div-form input {
-  width: 95%;
+  background-color: #F3E5D7;
+  width: 100%;
   border-radius: 5px;
+  height: 30px;
 }
 
 .dash-right .avisos .div-form textarea {
-  width: 95%;
-  border: 3px solid #e6005a;
-  background-color: white;
+  width: 100%;
+  border: none;
+  background-color: #F3E5D7;
   border-radius: 5px;
+  height: 60px;
+  padding: 5px  0 0 5px  ;
 }
 
 .dash-right .avisos .div-form button {
   cursor: pointer;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Love Ya Like A Sister", cursive;
   border: 0;
-  border-radius: 5px;
+  border-radius: 15px;
   font-weight: 600;
   font-size: 18px;
-  padding: 10px 15px;
+  padding: 3px 15px;
   color: white;
-  background-color: #e6005a;
-  width: 120px;
+  background-color: #23313C;
+  width: 100px;
+}
+
+.div_btn_enviar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .publicacao-btn-editar {
   cursor: pointer;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: "Love Ya Like A Sister", cursive;
   border: 0;
-  border-radius: 5px;
+  border-radius: 15px;
   font-weight: 600;
   font-size: 14px;
   padding: 5px 8px;
   color: white;
-  background-color: #e6005a;
-  width: 80px;
+  background-color: #23313C;
+  width: 100px;
 }
 
 .publicacao {
@@ -82,12 +154,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  border-bottom: 3px solid #23313C;
   padding: 20px;
+  border-radius: 10px;
+  width: 96%;
 }
 
 .publicacao>*:not(:last-child) {
   padding: 0 0 10px 0;
+  color: #1D2225;
 }
 
 .div-results {
@@ -95,9 +170,11 @@ body {
 }
 
 .div-results .feed-container {
-  background-color: #212124;
-  border-radius: 5px;
+  background-color: #F3E5D7;
+  border-radius: 10px;
   margin-bottom: 80px;
+  width: 95%;
+
 }
 
 .div-buttons {
@@ -112,7 +189,7 @@ body {
 /* pagina graficos */
 
 .dash-header {
-  background-color: #212124;
+  background-color: #B8A68A;
 }
 
 .dash {
@@ -120,9 +197,9 @@ body {
   position: relative;
   top: 0;
   left: 20%;
-  background-color: #161618;
-  height: 100vh;
-  overflow: auto;
+  background-color: #B8A68A;
+  height: 80vh;
+  
 }
 
 .area-parametros-alerta {
@@ -132,7 +209,7 @@ body {
   width: 70%;
   margin: auto;
   margin-top: 10px;
-  background-color: #212124;
+  background-color: #B8A68A;
 }
 
 .area-parametros-alerta .titulo-legenda {
@@ -193,7 +270,7 @@ body {
   height: 450px;
   width: 100%;
   align-items: center;
-  color: white;
+  color: #F3E5D7;
 }
 
 .card-aquario {
@@ -206,7 +283,7 @@ body {
   /* text-align: center; */
   height: 180px;
   /* justify-content: right; */
-  background-color: #212124;
+  background-color: #B8A68A;
   font-size: 20px;
 }
 
@@ -275,13 +352,13 @@ body {
 }
 
 .tituloGraficos {
-  color: rgb(216, 216, 216);
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
 }
 
 .btn-chart {
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: "Love Ya Like A Sister", cursive;
   border: 0;
   font-weight: 600;
   font-size: 18px;
@@ -329,6 +406,7 @@ canvas {
 
 .janela {
   display: flex;
+  background-color: #B8A68A;
   /* width: 100vw; */
 }
 
@@ -337,32 +415,71 @@ canvas {
   color: white;
 }
 
+/*
 .header-left {
   position: fixed;
-  top: 0;
+
   left: 0;
   z-index: 999;
   height: 100vh;
-  width: 20%;
+  width: 17%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  box-shadow: 0 0 10px 2px rgba(81, 44, 16, 0.5);
+   
+  background-color: #F3E5D7;
 }
 
+*/ 
+
+/*
 .dash-right {
   display: flex;
   width: 70%;
   height: fit-content;
-  background-color: #161618;
+  background-color: #B8A68A;
   position: relative;
   top: 0;
   left: 25%;
   height: 100vh;
   overflow: auto;
 }
+
+*/
+
+.header-left {
+  position: fixed;
+  top: 70px; /* altura da navbar */
+  left: 0;
+  width: 17%;
+  height: calc(100vh - 70px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: #F3E5D7;
+  box-shadow: 0 0 10px 2px rgba(81, 44, 16, 0.5);
+
+  overflow: hidden;
+}
+
+.dash-right {
+  margin-left: 17%;
+  
+
+  width: 83%;
+  min-height: calc(100vh - 70px);
+
+  background-color: #B8A68A;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 
 .header-left h1 {
   color: #32b9cd;
@@ -375,8 +492,8 @@ canvas {
 }
 
 .hello h3 {
-  color: #e3b062;
-  font-weight: 300;
+  color: #1B1919;
+  font-weight: 200;
   font-size: 1.2rem;
 }
 
@@ -385,44 +502,50 @@ canvas {
 }
 
 .btn-nav {
-  width: 40%;
-  color: white;
-  background-color: #e6005a;
-  border-radius: 5px;
+  width: 70%;
+  background-color: #932A2A;
+  border-radius: 20px;
   text-align: center;
-  padding: 2% 5%;
+  padding: 5% 5%;
 }
 
 .btn-nav-white {
-  width: 40%;
-  background-color: white;
-  border: 3px solid #e6005a;
-  border-radius: 5px;
+  width: 70%;
+  background-color: #932A2A;
+  border-radius: 20px;
   text-align: center;
-  padding: 2% 5%;
+  padding: 5% 5%;
 }
 
 .btn-nav-white h3 {
-  color: #e6005a;
+  color: #fafafa;
   padding: 0;
   margin: 0;
+  font-size: 20px;
 }
 
 .btn-nav h3,
 .btn-logout h3 {
   margin: 0;
   padding: 0;
+  text-decoration: underline;
+  color: white;
 }
 
 .btn-logout {
-  margin: 0;
-  padding: 0;
-  width: 20%;
-  background-color: #32b9cd;
-  color: white;
-  border-radius: 10px;
+  width: 70%;
+  background-color: #23313C;
+  border-radius: 20px;
   text-align: center;
-  padding: 10px 15px;
-  margin-bottom: 100px;
+  padding: 5% 5%;
   cursor: pointer;
+}
+
+.container h1 {
+  color: #1D2225;
+}
+
+.container {
+  display: flex;
+  justify-content: left;
 }
