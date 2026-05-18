@@ -399,9 +399,84 @@ body {
   display: block;
 }
 
-canvas {
-  width: 100% !important;
-  height: 100% !important;
+.janela_dashboard {
+  display: flex;
+  background-color: #B8A68A;
+ height: calc(100vh - 70px);
+}
+
+.dash_1 {
+ margin-left: 30%;
+
+}
+
+.div-pai {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.div-filho_kpi_Tendencia {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    height: 5em;
+    width: 20em;
+    background-color: #6e1313c2;
+    color: white;
+}
+
+.div-filho_kpi_Emocao {
+   display: flex;
+  flex-direction: column;
+   align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    height: 5em;
+    width: 20em;
+  background-color: #ab5b1eec;
+  color: white;
+}
+
+.KPI {
+  width: 5em;
+  height: 1em;
+}
+
+.div-filho {
+   
+    border-radius: 20px;
+    padding: 10px;
+    height: 15em;
+    background-color: #928166;
+    
+}
+
+h3 { 
+  color: #4A2E24;
+  text-decoration: none;
+  font-weight:400;
+  font-size: 24px;
+ 
+}
+
+.dash_1 h1{
+  display: flex;
+  justify-content: center;
+   
+  font-weight:500;
+  font-size: 40px;
+}
+
+.grafico {
+    width: 35em;
+    height: 20em;
+    background-color: #B8A68A;
+    border-radius: 20px;
 }
 
 /* PAGINA DOS GRÁFICOS 2023 */
@@ -613,4 +688,15 @@ canvas {
 .paragrafo_final {
   font-size: 16px;
  
+}
+
+.graficos {
+  width: 100vw;
+  height: 100vh;
+}
+
+.grafico {
+  box-sizing: border-box;
+    height: 280px;
+    width: 560px;
 }

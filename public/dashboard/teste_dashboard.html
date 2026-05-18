@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/dashboards.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/sessao.js"></script>
+    <script src="./../js/alerta.js"></script>
+</head>
+
+<body onload="obterDados()">
+    <div>
+        <!-- Elemento canvas onde o gráfico de linha será desenhado -->
+        <!--<canvas id="linha"></canvas>-->
+        <!-- Elemento canvas onde o gráfico de barra será desenhado -->
+     
+    </div>
+
+    <header>
+
+        <nav class="barra-navegacao">
+            <img src="../assets/imgs/LOGOLS-removebg-preview 1.png" alt="Logo do jogo">
+            <ul class="topicos-barra">
+                <li><a href="#" class="topico_home">Inicio</a></li>
+                <li><a href="#" class="topico_contexto">Contexto</a></li>
+                <li><a href="#" class="topico_historia">História</a></li>
+                <li><a href="#" class="topico_personagens">Personagens</a></li>
+                <li><a href="#" class="topico_reflexao">Reflexão</a></li>
+                <li><a href="./login.html" class="topico_entrar">Entrar</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="janela_dashboard">
+        <div class="header-left">
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="cards.html">
+                    <h3>Final escolhido</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav">
+                <a href="./teste_dashboard.html">
+                    <h3>Dashboard</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./mural.html">
+                    <h3>Fórum</h3>
+                </a>
+
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </div>
+
+        <div class="dash_1">
+            <h3>Esta é a sua dashboard personalisada corespondente a suas escolhas no login..</h3>
+            <h1>Dashboard</h1>
+            <div id="alerta">
+            </div>
+           
+        <div class="div-pai" >
+    <div class="div-filho_kpi_Emocao">
+        <p>Seu perfil demonstra alta:</p> 
+
+     <canvas id="kpi_emocao"class="KPI"></canvas>
+    </div>
+     <div class="div-filho_kpi_Tendencia">
+        <p>Você toma decisões mais: </p>
+        <canvas id="kpi_tendencia"class="KPI"></canvas>
+    </div>
+</div>
+<div class="div-pai" >
+    <div class="div-filho">
+        <canvas id="pizza" class="grafico" width="700" height="300" style="box-sizing: border-box;/* width: 560px; */height: 280px;"></canvas>
+    </div>
+     <div class="div-filho">
+        <canvas id="barra"class="grafico"></canvas>
+    </div>
+</div>
+            <!--<canvas id="linha" class="grafico"></canvas>-->    
+                
+                
+           
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    // Função chamada ao carregar a página para obter e processar os dados
+    function obterDados() {
+        // Aqui seria a função que obteria os dados do banco de dados
+        // No caso, aqui você colocaria o fetch que teria o endereço da sua rota que você criou na pasta /routes e chamaria a função plotarGraficoLinha nessa função. Exemplo:
+
+        // fetch('/obterDados')
+        // .then(function(response){
+        //   return response.json();
+        // })
+        // .then(function(data){
+        //   plotarGraficoLinha(data);
+        //   plotarGraficoBarra(data);
+        // })
+        // .catch(function(err){
+        //   console.log(err);
+        // })
+
+        // Como eu não configurei as rotas, eu criei um array com os dados para simular a obtenção dos dados
+        var dadosTendencia = [{
+            Emotivo: 4,
+            Racional: 1
+        }]
+        var dadosEmocao = [{
+            Justica: 2,
+            Empatia: 1,
+            Coragem: 1,
+            Lealdade: 1
+        }]
+
+        // Chamando a função para plotar o gráfico de linha com os dados
+        //plotarGraficoLinha(dados);
+        // Chamando a função para plotar o gráfico de barra com os dados
+        plotarGraficoBarra(dadosTendencia)
+        plotarGraficoPizza(dadosEmocao)
+    }
+    /*
+    // Função para plotar o gráfico de linha
+    function plotarGraficoLinha(dados){
+      
+      // Separando os rótulos (labels) e os dados dos votos
+      var votos = [];
+      var jogadores = [];
+    
+      // Preenchendo os arrays com os dados
+      for(var i = 0; i < dados.length; i++){
+        votos.push(dados[i].votos);
+        jogadores.push(dados[i].jogador);
+      }
+    
+      // Capturando o elemento canvas pelo id 
+      var ctx = document.getElementById('linha').getContext('2d');
+      // Criando o gráfico de linha usando o Chart.js
+      var myChart = new Chart(ctx, {
+          type: 'line', // Tipo de gráfico: linha
+          data: { // Dados para o gráfico
+              labels: jogadores, // Rótulos no eixo X
+              datasets: [{ 
+                  label: 'Votos', // Nome do conjunto de dados
+                  data: votos, // Dados dos votos
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)', // Cor de fundo das linhas
+                  ],
+                  borderColor: [
+                      'rgba(255, 99, 132, 1)', // Cor da borda das linhas
+                  ],
+                  borderWidth: 1 // Largura da borda das linhas
+              }]
+          },
+      });
+    } */
+
+    // Função para plotar o gráfico de barra
+    function plotarGraficoBarra(dados) {
+
+
+        // Preenchendo os arrays com os dados
+        /* for(var i = 0; i < dadosTendencia.length; i++){
+           votos.push(dadosTendencia[i].votos);
+           jogadores.push(dadosTendencia[i].jogador);
+         } */
+
+        // Capturando o elemento canvas pelo id 
+        var ctx = document.getElementById('barra').getContext('2d');
+        // Criando o gráfico de barra usando o Chart.js
+        var myChart = new Chart(ctx, {
+            type: 'bar', // Tipo de gráfico: barra
+            data: { // Dados para o gráfico
+                labels: ['Racional', 'Emotivo'], // Rótulos no eixo X
+                datasets: [{
+                    label: 'Tendencias', // Nome do conjunto de dados
+                    data: [dados[0].Racional, dados[0].Emotivo],
+                    backgroundColor: [
+                      '#232a8ca8','#932a2ad2 ' // Cor de fundo das linhas
+                  ]
+                }]
+            },
+        });
+    }
+
+    function plotarGraficoPizza(dados) {
+        var ctx = document.getElementById('pizza').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Empatia', 'Lealdade', 'Justiça', 'Coragem'],
+                datasets: [{
+                    label: 'Pontuação', // Nome do conjunto de dados
+                    data: [dados[0].Empatia, dados[0].Lealdade, dados[0].Justica, dados[0].Coragem], // Dados dos votos
+                    backgroundColor: [
+                      '#eb9b11dd','#2e4723dd','#1e7fafdd','#66202add' // Cor de fundo das linhas
+                  ],
+                  borderWidth: 0
+                }]
+            },
+        });
+    }
+
+</script>
