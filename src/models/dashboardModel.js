@@ -28,6 +28,21 @@ function buscarDadosDashboard(idUsuario) {
         return database.executar(instrucaoSql);
     
 } 
+
+function buscarFinal(idUsuario) {
+      var instrucaoSql = `
+      SELECT fkAlternativa 
+      FROM resposta 
+      WHERE fkUsuario = ${idUsuario}
+      AND fkPergunta = 5
+      ORDER BY id DESC 
+      LIMIT 1;
+      `
+      console.log("Executando a instrução SQL: \n" + instrucaoSql);
+        return database.executar(instrucaoSql);
+}
+
      module.exports = {
-    buscarDadosDashboard
+    buscarDadosDashboard,
+    buscarFinal
 }

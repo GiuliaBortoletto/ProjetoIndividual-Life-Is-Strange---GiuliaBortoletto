@@ -20,7 +20,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), exibirAquarios(),  atualizacaoPeriodica()">
+<body onload="mostrarFinal()">
 
     <header>
 
@@ -70,77 +70,107 @@
 
         </div>
 
-        
-            <main class="final_emotivo" style="display: none;">
 
-    <div class="conteudo_escrito">
-        <h3>Para você que escolheu salvar a pessoa que<br> mais ama...</h3>
+        <main class="final_emotivo" id="final_emotivo" style="display: none;">
 
-        <div class="titulo_final">
-            <h1>SALVAR QUEM <span class="texto_emotivo">AMA</span>  TEM SUAS</h1>
-            <span class="texto_racional">CONSEQUÊNCIAS</span>
-        </div>
-        <div class="paragrafo_final">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              <br> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-        </div>
-    </div>
+            <div class="conteudo_escrito">
+                <h3>Para você que escolheu salvar a pessoa que<br> mais ama...</h3>
 
-    <div class="div_img">
-        <img src="../assets/imgs/final_emotivo.png"
-             class="img_emotiva">
-    </div>
+                <div class="titulo_final">
+                    <h1>SALVAR QUEM <span class="texto_emotivo">AMA</span> TEM SUAS</h1>
+                    <span class="texto_racional">CONSEQUÊNCIAS</span>
+                </div>
+                <div class="paragrafo_final">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <br> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
 
-</main>
+            <div class="div_img">
+                <img src="../assets/imgs/final_emotivo.png" class="img_emotiva">
+            </div>
 
- <main class="final_emotivo" style="display: flex;">
+        </main>
 
-    <div class="conteudo_escrito">
-        <h3>Para você que escolheu salvar a cidade e <br>seguir em frente..</h3>
+        <main class="final_emotivo" id="final_racional" style="display: none;">
 
-        <div class="titulo_final">
-            <h1>SEGUIR EM FRENTE EM MEIO A  <span class="texto_emotivo">DIFICULDADE</span> </h1>
-            <h1>TEM SUAS<span class="texto_racional"> CONSEQUÊNCIAS</span></h1>
-        </div>
-        <div class="paragrafo_final">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              <br> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-        </div>
-    </div>
+            <div class="conteudo_escrito">
+                <h3>Para você que escolheu salvar a cidade e <br>seguir em frente..</h3>
 
-    <div class="div_img">
-        <img src="../assets/imgs/final_racional.png"
-             class="img_emotiva">
-    </div>
+                <div class="titulo_final">
+                    <h1>SEGUIR EM FRENTE EM MEIO A <span class="texto_emotivo">DIFICULDADE</span> </h1>
+                    <h1>TEM SUAS<span class="texto_racional"> CONSEQUÊNCIAS</span></h1>
+                </div>
+                <div class="paragrafo_final">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <br> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
 
-</main>
-       
+            <div class="div_img">
+                <img src="../assets/imgs/final_racional.png" class="img_emotiva">
+            </div>
+
+        </main>
+
     </div>
 
 </body>
 
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    function exibirAquarios() {
-        JSON.parse(sessionStorage.AQUARIOS).forEach(item => {
-            document.getElementById("cardAquarios").innerHTML += `
-                    <div class="card-aquario">
-                        <div class="title-aquario">
-                            <h1>${item.descricao}</h1>
-                        </div>
-                        <div class="desc-aquario">
-                        <div class="temperatura">
-                            <p id="temp_aquario_${item.id}">-°C</p>
-                        </div>
-                        <div class="cor-alerta" id="card_${item.id}"></div>
-                    </div>
-                    </div>
-                    `
-        });
+    function mostrarFinal() {
+        fetch(`/dashboard/final/${sessionStorage.ID_USUARIO}`)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (dados) {
+                console.log(dados);
+                var finalEscolhido = dados[0].fkAlternativa;
+
+                if (finalEscolhido == 17) {
+                    final_emotivo.style.display = "flex";
+                }
+
+                if (finalEscolhido == 18) {
+                    final_racional.style.display = "flex";
+                }
+            })
+
+
+
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
     }
 
 </script>

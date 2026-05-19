@@ -73,14 +73,14 @@
             </div>
            
         <div class="div-pai" >
-    <div class="div-filho_kpi_Emocao">
+    <div class="div_filho_kpi_Emocao" id="div_filho_kpi_Emocao">
         <p>Seu perfil demonstra alta:</p> 
 
-     <canvas id="kpi_emocao"class="KPI"></canvas>
+     <div id="kpi_emocao"class="KPI"></div>
     </div>
-     <div class="div-filho_kpi_Tendencia">
+     <div class="div_filho_kpi_Tendencia" id="div_filho_kpi_Tendencia">
         <p>Você toma decisões mais: </p>
-        <canvas id="kpi_tendencia"class="KPI"></canvas>
+        <div id="kpi_tendencia"class="KPI"></div>
     </div>
 </div>
 <div class="div-pai" >
@@ -116,6 +116,8 @@
          .then(function(data){
           plotarGraficoPizza(data);
            plotarGraficoBarra(data);
+
+           exibirKPI(data);
          })
          .catch(function(erro){
            console.log(erro);
@@ -220,6 +222,58 @@
                 }]
             },
         });
+    }
+
+    function exibirKPI(dados) {
+        var empatia = dados[0].Empatia;
+        var justica = dados[0].Justica;
+        var coragem = dados[0].Coragem;
+        var lealdade = dados[0].Lealdade;
+        var emotivo = dados[0].Emotivo;
+        var racional = dados[0].Racional;
+        var emocaoDominante = '';
+        var maiorEmocao = 0;
+        var tendenciaDominante = '';
+
+        if(empatia > maiorEmocao) {
+            maiorEmocao = empatia;
+            emocaoDominante = 'Empatia';
+            div_filho_kpi_Emocao.style.backgroundColor = '#ab5b1eec';
+        }
+        
+        if (justica > maiorEmocao) {
+            maiorEmocao = justica;
+            emocaoDominante = 'Justiça';
+            div_filho_kpi_Emocao.style.backgroundColor = '#1e7fafdd';
+        }
+
+        if (coragem > maiorEmocao) {
+            maiorEmocao = coragem;
+            emocaoDominante = 'Coragem';
+            div_filho_kpi_Emocao.style.backgroundColor = '#66202add';
+        }
+
+        if (lealdade > maiorEmocao) {
+            maiorEmocao = lealdade;
+            emocaoDominante = 'Lealdade';
+            div_filho_kpi_Emocao.style.backgroundColor = '#2e4723dd';
+        }
+
+        if(racional > emotivo) {
+            tendenciaDominante = 'Racionais';
+            div_filho_kpi_Tendencia.style.backgroundColor = '#232a8ca8';
+        } else if(emotivo > racional){
+            tendenciaDominante = 'Emotivas';
+            div_filho_kpi_Tendencia.style.backgroundColor = '#932a2ad2';
+        } else {
+            tendenciaDominante = 'Equilibradas';
+            div_filho_kpi_Tendencia.style.backgroundColor = '#57361cec';
+        }
+
+        kpi_emocao.innerHTML = `${emocaoDominante}`;
+        kpi_tendencia.innerHTML = `${tendenciaDominante}`;
+
+
     }
 
 </script>

@@ -24,6 +24,27 @@ function buscarDadosDashboard(req,res) {
         );
 }
 
+
+function buscarFinal(req,res) {
+    var idUsuario = req.params.idUsuario;
+
+    dashboardModel.buscarFinal(idUsuario)
+        .then (function (resultado) {
+              res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "Houve um erro ao buscar os dados da dashboard: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+     }
+
 module.exports = {
-    buscarDadosDashboard
+    buscarDadosDashboard,
+    buscarFinal
 }

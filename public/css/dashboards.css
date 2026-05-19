@@ -418,7 +418,7 @@ body {
     padding-top: 3%;
 }
 
-.div-filho_kpi_Tendencia {
+.div_filho_kpi_Tendencia {
   display: flex;
   flex-direction: column;
    align-items: center;
@@ -430,7 +430,7 @@ body {
     color: white;
 }
 
-.div-filho_kpi_Emocao {
+.div_filho_kpi_Emocao {
    display: flex;
   flex-direction: column;
    align-items: center;
