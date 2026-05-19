@@ -109,20 +109,20 @@
         // Aqui seria a função que obteria os dados do banco de dados
         // No caso, aqui você colocaria o fetch que teria o endereço da sua rota que você criou na pasta /routes e chamaria a função plotarGraficoLinha nessa função. Exemplo:
 
-        // fetch('/obterDados')
-        // .then(function(response){
-        //   return response.json();
-        // })
-        // .then(function(data){
-        //   plotarGraficoLinha(data);
-        //   plotarGraficoBarra(data);
-        // })
-        // .catch(function(err){
-        //   console.log(err);
-        // })
+         fetch(`/dashboard/${sessionStorage.ID_USUARIO}`)
+         .then(function(response){
+           return response.json();
+         })
+         .then(function(data){
+          plotarGraficoPizza(data);
+           plotarGraficoBarra(data);
+         })
+         .catch(function(erro){
+           console.log(erro);
+         })
 
         // Como eu não configurei as rotas, eu criei um array com os dados para simular a obtenção dos dados
-        var dadosTendencia = [{
+       /* var dadosTendencia = [{
             Emotivo: 4,
             Racional: 1
         }]
@@ -132,12 +132,13 @@
             Coragem: 1,
             Lealdade: 1
         }]
+            */
 
         // Chamando a função para plotar o gráfico de linha com os dados
         //plotarGraficoLinha(dados);
         // Chamando a função para plotar o gráfico de barra com os dados
-        plotarGraficoBarra(dadosTendencia)
-        plotarGraficoPizza(dadosEmocao)
+       // plotarGraficoBarra(dadosTendencia)
+       // plotarGraficoPizza(dadosEmocao)
     }
     /*
     // Função para plotar o gráfico de linha
