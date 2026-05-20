@@ -60,10 +60,11 @@
               emocionalmente envolvente, que coloca o jogador no centro da história.
             </div>
             <div class="conteudo_imagem">
+              <img src="./assets/imgs/fotoMaxChloe.jpg" alt="" class="fotoContexto">
 
-              <div class="div_img_iluminati">
-                <img src="./assets/imgs/iluminati.png" alt="Pixação de Chloe, um triangulo com olho e alguns rabiscos">
-              </div>
+              <img src="./assets/imgs/iluminati.png" alt="Pixação de Chloe, um triangulo com olho e alguns rabiscos"
+                class="div_img_iluminati">
+
 
             </div>
 
@@ -97,7 +98,7 @@
               consequências começam a se intensificar, levando a um conflito maior que ameaça toda a cidade.
             </div>
             <div class="conteudo_imagem">
-
+              <img src="./assets/imgs/fotosfotos2.jpg" alt="" class="fotoHistoria">
 
             </div>
 
@@ -176,22 +177,24 @@
             amadurecer e entender que nem tudo pode — ou deve — ser controlado.
           </div>
           <div class="conteudo_imagem">
-
+            <img src="./assets/imgs/reflexao.jpg" alt="" class="fotoReflexao">
+            <button onclick="sortearFrase()" class="btn_sortear">Uma vez Max disse que..</button>
 
           </div>
 
         </div>
 
-        <!--
-                    <div class="div_img_borboleta">
-                        <img src="../imgs/thisAction2.png"
-                            alt="Borboleta azul de asas abertas com texto 'this action wil have consequences..'" class="img_borboleta">
-                    </div>
 
-                    -->
+        <div class="div_img_borboleta" id="div_img_borboleta">
+          <br> <b> Talvez agora fosse uma boa hora para ouvir um conselho. </b><br>
+
+        </div>
+
+
       </div>
     </main>
     <footer class="footer_reflexao">
+
 
 
     </footer>
@@ -203,7 +206,25 @@
 
 </html>
 <script>
+
+  let listaFrases = ['Tudo é uma fotografia à espera de ser tirada...', 'Quando uma porta se fecha, uma janela se abre... Ou algo parecido.', 'Gostaria de poder ficar neste momento para sempre. (...) Mas aí não seria mais um momento.', 'Com grande poder vêm grandes mentiras.']
+
   function conheca() {
     window.location = 'cadastro.html';
+  }
+
+  function sortearFrase() {
+    let sorteador = Math.random() * listaFrases.length + 0;
+    sorteador = sorteador.toFixed(0);
+    if (sorteador < 4) {
+      div_img_borboleta.innerHTML = `<br> ${listaFrases[sorteador]}`
+    } else {
+      div_img_borboleta.innerHTML = `<br> ${listaFrases[sorteador-1]}`
+    }
+
+    console.log(sorteador)
+
+
+
   }
 </script>
