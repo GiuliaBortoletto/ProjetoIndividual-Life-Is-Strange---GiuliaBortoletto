@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -286,7 +289,7 @@ section {
 }
 
 .btn_sortear:hover {
-    background-color: #1d5fcb;
+    background-color: #2a6cd5c1;
     
     
 }
