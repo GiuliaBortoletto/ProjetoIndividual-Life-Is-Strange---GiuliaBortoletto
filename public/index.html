@@ -28,7 +28,7 @@
     </header>
     <main class="main_home">
 
-      <button class="btn_entrar" onclick="conheca()">Começar</button>
+      <button class="btn_entrar" onclick="conheca()">Cadastre-se</button>
 
     </main>
     <footer>
@@ -98,7 +98,8 @@
               consequências começam a se intensificar, levando a um conflito maior que ameaça toda a cidade.
             </div>
             <div class="conteudo_imagem">
-              <img src="./assets/imgs/fotosfotos2.jpg" alt="" class="fotoHistoria">
+              <img src="./assets/imgs/maxFoto.jpg" alt="" class="fotoHistoria">
+              <img src="./assets/imgs/aVidaÉestranha.png" alt="" class="icone_voltar">
 
             </div>
 
@@ -121,26 +122,57 @@
             <h1 class="titulo_contexto" id="personagens">Personagens</h1>
           </div>
 
-          <div class="carrossel_persongens">
-            <div class="carrossel_img">
-              <img src="./assets/imgs/Professor.png" alt="">
-              <p>PROFESSOR</p>
-            </div>
-            <div class="carrossel_img">
-              <img src="./assets/imgs/Max.png" alt="">
-              <p>MAX</p>
-            </div>
-            <div class="carrossel_img">
-              <img src="./assets/imgs/Chloe.png" alt="">
-              <p>CHLOE</p>
-            </div>
-            <div class="carrossel_img">
-              <img src="./assets/imgs/Rachel.png" alt="">
-              <p>RACHEL</p>
-            </div>
+          <div class="carrossel_personagens">
+            <div class="personagens1">
+              <div class="card_personagem">
+                <img src="./assets/imgs/Max.png" class="img_personagens">
 
+                <div class="info_personagem">
+                  <h2>MAX</h2>
+                  <p>
+                    Max Caulfield é uma estudante de fotografia que descobre o poder de voltar no tempo.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card_personagem">
+                <img src="./assets/imgs/Professor.png" class="img_personagens">
+
+                <div class="info_personagem">
+                  <h2>PROFESSOR</h2>
+                  <p>
+                    Mark Jefferson é um professor renomado da Blackwell Academy.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="personagens2">
+              <div class="card_personagem">
+                <img src="./assets/imgs/Chloe.png" class="img_personagens">
+
+
+                <div class="info_personagem">
+                  <h2>CHLOE</h2>
+                  <p>
+                    Chloe Price é a melhor amiga de Max, conhecida por sua personalidade rebelde.
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="card_personagem">
+                <img src="./assets/imgs/Rachel.png" class="img_personagens">
+
+                <div class="info_personagem">
+                  <h2>RACHEL</h2>
+                  <p>
+                    Rachel Amber era uma estudante popular e misteriosa em Arcadia Bay.
+                  </p>
+                </div>
+              </div>
+
+            
           </div>
-
 
         </div>
 
@@ -168,13 +200,13 @@
           <div class="conteudo_escrito">
             Life Is Strange levanta uma questão poderosa: até que ponto devemos interferir no curso
             natural das coisas?
-            O jogo mostra que, mesmo com a chance de “consertar” erros, cada escolha carrega
-            consequências imprevisíveis.<br><br>
             Ele também explora a importância das conexões humanas e como pequenas atitudes podem
-            impactar profundamente
-            a vida dos outros. No fim, a experiência não é apenas sobre voltar no tempo, mas sobre
-            aceitar perdas,
-            amadurecer e entender que nem tudo pode — ou deve — ser controlado.
+            impactar profundamente<br><br>
+            Por meio deste site você poderá ter uma prévia de como o jogo leva em consideração cada ação
+            escolhida pelo usuario. <br>
+            Tenha acesso a uma dashboard personalizada com base nas suas escolhas após realizar o cadastro e
+            responder o nosso quiz. Descubra em que tipo de personalidade você se enquadra e se toma emoções mais
+            racionais ou emotivas.
           </div>
           <div class="conteudo_imagem">
             <img src="./assets/imgs/reflexao.jpg" alt="" class="fotoReflexao">
@@ -185,17 +217,18 @@
         </div>
 
 
-        <div class="div_img_borboleta" id="div_img_borboleta">
-          <br> <b> Talvez agora fosse uma boa hora para ouvir um conselho. </b><br>
 
-        </div>
 
 
       </div>
     </main>
     <footer class="footer_reflexao">
 
+      <div class="div_img_borboleta" id="div_img_borboleta">
+        <br> <b> Talvez agora fosse uma boa hora para ouvir um conselho. </b>
+        <span class="mencaoFrase">(clique no botão "Uma vez a max disse..")</span>
 
+      </div>
 
     </footer>
 
@@ -219,7 +252,7 @@
     if (sorteador < 4) {
       div_img_borboleta.innerHTML = `<br> ${listaFrases[sorteador]}`
     } else {
-      div_img_borboleta.innerHTML = `<br> ${listaFrases[sorteador-1]}`
+      div_img_borboleta.innerHTML = `<br> ${listaFrases[sorteador - 1]}`
     }
 
     console.log(sorteador)
