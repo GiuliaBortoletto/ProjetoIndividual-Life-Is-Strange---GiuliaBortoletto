@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -11,8 +11,8 @@ html{
     font-weight: 400;
     font-style: normal;
 
-  
- 
+
+
 }
 
 section {
@@ -51,8 +51,8 @@ section {
 }
 
 .topicos-barra a {
- text-decoration: none;
- color: white;
+    text-decoration: none;
+    color: white;
 }
 
 .topicos-barra li:hover {
@@ -64,8 +64,8 @@ section {
     background-image: linear-gradient(to right, #232a8cb7, #4a2e24a5);
     color: white;
     padding: 15px;
-    
-   
+
+
     font-size: 26px;
     border: solid 1px #ffff;
     border-radius: 10px;
@@ -191,6 +191,7 @@ section {
     justify-content: center;
 
 }
+
 .carrossel_personagens {
     display: flex;
     gap: 10px;
@@ -209,7 +210,7 @@ section {
     gap: 10px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -240,7 +241,8 @@ section {
     color: #4a3a33;
 }
 
-.personagens1, .personagens2 {
+.personagens1,
+.personagens2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -273,19 +275,20 @@ section {
 
 .conteudo_imagem {
     width: 45%;
-   
+
     display: flex;
     align-items: center;
     flex-direction: column;
 
 }
+
 .div_img_borboleta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: white;
-  font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 25px;
 }
 
 .fotoContexto {
@@ -299,22 +302,22 @@ section {
 }
 
 .div_img_iluminati {
-   
-   
+
+
     position: absolute;
     right: -1em;
     bottom: 3em;
 }
 
 .fotoHistoria {
-     width: 300px;
+    width: 300px;
     height: 300px;
     padding: 20px 10px 60px 10px;
     background-color: #fff6f0;
 }
 
 .icone_voltar {
-     position: absolute;
+    position: absolute;
     right: 4em;
     bottom: 5em;
     width: 200px;
@@ -339,7 +342,7 @@ section {
 .btn_sortear:hover {
     background-color: #1863a1;
     border: none;
-    
+
 }
 
 .footer_reflexao {

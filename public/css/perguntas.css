@@ -21,9 +21,9 @@ section {
 fieldset {
     border: none;
     display: flex;
-    flex-direction:column;
-    gap:10px;
-    
+    flex-direction: column;
+    gap: 10px;
+
 }
 
 .opcao {
@@ -49,12 +49,12 @@ h3 {
 }
 
 .titulo_pergunta {
-    color:  #593125;
+    color: #593125;
 
 }
 
 .pergunta {
-    color:black;
+    color: black;
 }
 
 .div_pergunta {
@@ -67,8 +67,8 @@ h3 {
 main {
     display: flex;
     flex-direction: column;
-    gap:20px;
-    
+    gap: 20px;
+
 }
 
 .pergunta_final {
@@ -77,7 +77,7 @@ main {
 }
 
 .opcoes_finais {
-       display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
@@ -108,7 +108,7 @@ main {
 }
 
 .div_btn_enviar {
-    
+
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -135,11 +135,11 @@ main {
 }
 
 .div_opções_finais {
-display: flex;
+    display: flex;
 }
 
 .opcao_final {
-     display: flex;
+    display: flex;
     align-items: center;
     gap: 8px;
 }

@@ -16,30 +16,7 @@
 </head>
 
 <body onload="listar()">
-  <!--header inicio-->
-
-  <!--
-  <div class="header">
-    <div class="container">
-      <h1 class="titulo">AquaTech</h1>
-      <ul class="navbar">
-        <li>
-          <a href="index.html">Inicial</a>
-        </li>
-        <li>
-          <a href="simulador.html">Simulador</a>
-        </li>
-        <li>|</li>
-        <li>
-          <a href="login.html">Login</a>
-        </li>
-        <li class="agora">
-          <a href="#">Cadastro</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  -->
+ 
   <section class="tela_cadastro">
     <header>
       <nav class="barra-navegacao">
@@ -53,7 +30,6 @@
         </ul>
       </nav>
     </header>
-    <!--header fim-->
 
     <div class="login">
       <div class="alerta_erro">
@@ -65,11 +41,6 @@
       <div class="card card-cadastro">
         <h2>Bem-vindo!</h2>
         <div class="formulario">
-          <!--
-                         Para inserir mais um div_inputs, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                     -->
-
           <div class="div_inputs">
             <span>Nome:</span>
             <input id="nome_input" type="text" placeholder="Seu nome" />
@@ -192,20 +163,6 @@
       setInterval(sumirMensagem, 5000);
     }
     
-
-    // Verificando se o código de ativação é de alguma empresa cadastrada
-    /*for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
-      if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
-        idEmpresaVincular = listaEmpresasCadastradas[i].id
-        console.log("Código de ativação válido.");
-        break;
-      } else {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
-        finalizarAguardar();
-      }
-    } */
-
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
       method: "POST",

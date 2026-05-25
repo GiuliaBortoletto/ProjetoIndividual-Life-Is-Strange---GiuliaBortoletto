@@ -13,7 +13,7 @@
 
 <body onload="obterDados()">
     <div>
-       
+
     </div>
 
     <header>
@@ -68,32 +68,33 @@
             <h1>Dashboard</h1>
             <div id="alerta">
             </div>
-           
-        <div class="div-pai" >
-    <div class="div_filho_kpi_Emocao" id="div_filho_kpi_Emocao">
-        <p>Seu perfil demonstra alta:</p> 
 
-     <div id="kpi_emocao"class="KPI"></div>
-    </div>
-     <div class="div_filho_kpi_Tendencia" id="div_filho_kpi_Tendencia">
-        <p>Você toma decisões mais: </p>
-        <div id="kpi_tendencia"class="KPI"></div>
-    </div>
-     <div class="div_filho_kpi_global" id="div_filho_kpi_global">
-        <p> Escolheram a opção final igual a sua: </p>
-        <div id="kpi_final"class="KPI_global"></div>
-    </div>
-</div>
-<div class="div-pai" >
-    <div class="div-filho">
-        <canvas id="pizza" class="grafico" width="700" height="300" style="box-sizing: border-box;/* width: 560px; */height: 280px;"></canvas>
-    </div>
-     <div class="div-filho">
-        <canvas id="barra"class="grafico"></canvas>
-    </div>
-</div>
-       
-           
+            <div class="div-pai">
+                <div class="div_filho_kpi_Emocao" id="div_filho_kpi_Emocao">
+                    <p>Seu perfil demonstra alta:</p>
+
+                    <div id="kpi_emocao" class="KPI"></div>
+                </div>
+                <div class="div_filho_kpi_Tendencia" id="div_filho_kpi_Tendencia">
+                    <p>Você toma decisões mais: </p>
+                    <div id="kpi_tendencia" class="KPI"></div>
+                </div>
+                <div class="div_filho_kpi_global" id="div_filho_kpi_global">
+                    <p> Escolheram a opção final igual a sua: </p>
+                    <div id="kpi_final" class="KPI_global"></div>
+                </div>
+            </div>
+            <div class="div-pai">
+                <div class="div-filho">
+                    <canvas id="pizza" class="grafico" width="700" height="300"
+                        style="box-sizing: border-box;/* width: 560px; */height: 280px;"></canvas>
+                </div>
+                <div class="div-filho">
+                    <canvas id="barra" class="grafico"></canvas>
+                </div>
+            </div>
+
+
         </div>
     </div>
 
@@ -101,31 +102,31 @@
 
 </html>
 <script>
- b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     // Função chamada ao carregar a página para obter e processar os dados
     function obterDados() {
         // Aqui seria a função que obteria os dados do banco de dados
         // No caso, aqui você colocaria o fetch que teria o endereço da sua rota que você criou na pasta /routes e chamaria a função plotarGraficoLinha nessa função. Exemplo:
 
-         fetch(`/dashboard/${sessionStorage.ID_USUARIO}`)
-         .then(function(response){
-           return response.json();
-         })
-         .then(function(data){
-          plotarGraficoPizza(data);
-           plotarGraficoBarra(data);
-            
-           exibirKPI(data);
-         })
-         .catch(function(erro){
-           console.log(erro);
-         });
+        fetch(`/dashboard/${sessionStorage.ID_USUARIO}`)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                plotarGraficoPizza(data);
+                plotarGraficoBarra(data);
 
-         exibirKPIFinal();
-    
+                exibirKPI(data);
+            })
+            .catch(function (erro) {
+                console.log(erro);
+            });
+
+        exibirKPIFinal();
+
     }
-    
+
 
     // Função para plotar o gráfico de barra
     function plotarGraficoBarra(dados) {
@@ -148,8 +149,8 @@
                     label: 'Suas tendencias com base no quiz', // Nome do conjunto de dados
                     data: [dados[0].Racional, dados[0].Emotivo],
                     backgroundColor: [
-                      '#232a8ca8','#932a2ad2 ' // Cor de fundo das linhas
-                  ]
+                        '#232a8ca8', '#932a2ad2 ' // Cor de fundo das linhas
+                    ]
                 }]
             },
         });
@@ -165,9 +166,9 @@
                     label: 'Suas emoções com base no quiz', // Nome do conjunto de dados
                     data: [dados[0].Empatia, dados[0].Lealdade, dados[0].Justica, dados[0].Coragem], // Dados dos votos
                     backgroundColor: [
-                      '#eb9b11dd','#2e4723dd','#1e7fafdd','#66202add' // Cor de fundo das linhas
-                  ],
-                  borderWidth: 0
+                        '#eb9b11dd', '#2e4723dd', '#1e7fafdd', '#66202add' // Cor de fundo das linhas
+                    ],
+                    borderWidth: 0
                 }]
             },
         });
@@ -184,12 +185,12 @@
         var maiorEmocao = 0;
         var tendenciaDominante = '';
 
-        if(empatia > maiorEmocao) {
+        if (empatia > maiorEmocao) {
             maiorEmocao = empatia;
             emocaoDominante = 'Empatia';
             div_filho_kpi_Emocao.style.backgroundColor = '#ab5b1eec';
         }
-        
+
         if (justica > maiorEmocao) {
             maiorEmocao = justica;
             emocaoDominante = 'Justiça';
@@ -208,10 +209,10 @@
             div_filho_kpi_Emocao.style.backgroundColor = '#2e4723dd';
         }
 
-        if(racional > emotivo) {
+        if (racional > emotivo) {
             tendenciaDominante = 'Racionais';
             div_filho_kpi_Tendencia.style.backgroundColor = '#232a8ca8';
-        } else if(emotivo > racional){
+        } else if (emotivo > racional) {
             tendenciaDominante = 'Emotivas';
             div_filho_kpi_Tendencia.style.backgroundColor = '#932a2ad2';
         } else {
@@ -227,24 +228,24 @@
 
     function exibirKPIFinal() {
 
-    fetch(`/dashboard/kpiFinal/${sessionStorage.ID_USUARIO}`)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(dados){
-        
-        console.log(dados);
-        var iguais = dados[0].iguais;
-        var total = dados[0].total;
-        var porcentagem = (iguais/total) * 100;
+        fetch(`/dashboard/kpiFinal/${sessionStorage.ID_USUARIO}`)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (dados) {
 
-        kpi_final.innerHTML = `${porcentagem.toFixed(0)}%`;
+                console.log(dados);
+                var iguais = dados[0].iguais;
+                var total = dados[0].total;
+                var porcentagem = (iguais / total) * 100;
 
-    })
-    .catch(function(erro){
-        console.log(erro);
-    });
+                kpi_final.innerHTML = `${porcentagem.toFixed(0)}%`;
 
-}
+            })
+            .catch(function (erro) {
+                console.log(erro);
+            });
+
+    }
 
 </script>

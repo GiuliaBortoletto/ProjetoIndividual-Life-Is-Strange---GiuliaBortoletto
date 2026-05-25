@@ -7,64 +7,64 @@
 body {
   margin: 0;
   padding: 0;
-   font-family: "Love Ya Like A Sister", cursive;
-   background-color: #B8A68A;
-    overflow-x: hidden;
+  font-family: "Love Ya Like A Sister", cursive;
+  background-color: #B8A68A;
+  overflow-x: hidden;
 }
 
 
 
 .barra-navegacao {
-    width: 100%;
-    height: 70px;
-    background-image: linear-gradient(to right, #232A8C, #4A2E24);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 100px;
-    justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  background-image: linear-gradient(to right, #232A8C, #4A2E24);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+  justify-content: space-between;
 }
 
 .topicos-barra {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    color: white;
-    font-size: 26px;
-    list-style: none;
-    margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  color: white;
+  font-size: 26px;
+  list-style: none;
+  margin-right: 50px;
 }
 
 .topicos-barra a {
- text-decoration: none;
- color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .topicos-barra li:hover {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .btn_entrar {
-    background-image: linear-gradient(to right, #232a8c6f, #4a2e2460);
-    color: white;
-    padding: 10px;
-    width: 170px;
-    height: 50px;
-    font-size: 26px;
-    border: solid 1px #ffff;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    margin-top: 70px;
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  background-image: linear-gradient(to right, #232a8c6f, #4a2e2460);
+  color: white;
+  padding: 10px;
+  width: 170px;
+  height: 50px;
+  font-size: 26px;
+  border: solid 1px #ffff;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin-top: 70px;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
 
 .btn_entrar:hover {
-    background-image: linear-gradient(to right, #232a8cd1, #4a2e24cb);
-    backdrop-filter: blur(10px);
-    cursor: pointer;
-    transform: scale(1.05);
+  background-image: linear-gradient(to right, #232a8cd1, #4a2e24cb);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 
@@ -77,14 +77,14 @@ body {
 .dash-right .avisos {
   width: 100%;
   color: rgb(216, 216, 216);
-   font-family: "Love Ya Like A Sister", cursive;
-   
+  font-family: "Love Ya Like A Sister", cursive;
+
 }
 
 .dash-right .avisos .container {
   display: flex;
   flex-direction: column;
- 
+
 }
 
 .dash-right .avisos .container .div-form {
@@ -112,7 +112,7 @@ body {
   background-color: #F3E5D7;
   border-radius: 5px;
   height: 60px;
-  padding: 5px  0 0 5px  ;
+  padding: 5px 0 0 5px;
 }
 
 .dash-right .avisos .div-form button {
@@ -136,7 +136,7 @@ body {
 
 .publicacao-btn-editar {
   cursor: pointer;
-   font-family: "Love Ya Like A Sister", cursive;
+  font-family: "Love Ya Like A Sister", cursive;
   border: 0;
   border-radius: 15px;
   font-weight: 600;
@@ -360,7 +360,7 @@ body {
 }
 
 .btn-chart {
-   font-family: "Love Ya Like A Sister", cursive;
+  font-family: "Love Ya Like A Sister", cursive;
   border: 0;
   font-weight: 600;
   font-size: 18px;
@@ -402,42 +402,42 @@ body {
 .janela_dashboard {
   display: flex;
   background-color: #B8A68A;
- height: calc(100vh - 70px);
+  height: calc(100vh - 70px);
 }
 
 .dash_1 {
- margin-left: 20%;
+  margin-left: 20%;
 
 }
 
 .div-pai {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    justify-content: center;
-    padding-top: 3%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  padding-top: 3%;
 }
 
 .div_filho_kpi_Tendencia {
   display: flex;
   flex-direction: column;
-   align-items: center;
-    border-radius: 20px;
-    padding: 10px;
-    height: 5em;
-    width: 20em;
-    background-color: #6e1313c2;
-    color: white;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  height: 5em;
+  width: 20em;
+  background-color: #6e1313c2;
+  color: white;
 }
 
 .div_filho_kpi_Emocao {
-   display: flex;
+  display: flex;
   flex-direction: column;
-   align-items: center;
-    border-radius: 20px;
-    padding: 10px;
-    height: 5em;
-    width: 20em;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  height: 5em;
+  width: 20em;
   background-color: #ab5b1eec;
   color: white;
 }
@@ -445,13 +445,13 @@ body {
 .div_filho_kpi_global {
   display: flex;
   flex-direction: column;
-   align-items: center;
-    border-radius: 20px;
-    padding: 10px;
-    height: 5em;
-    width: 20em;
-    background-color: #12ae8ae1;
-    color: white;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  height: 5em;
+  width: 20em;
+  background-color: #12ae8ae1;
+  color: white;
 }
 
 .KPI {
@@ -461,43 +461,43 @@ body {
 
 .KPI_global {
   width: 100%;
-   height: 1em;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-size: 25px;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
 }
 
 .div-filho {
-   
-    border-radius: 20px;
-    padding: 10px;
-    height: 15em;
-    background-color: #928166;
-    
+
+  border-radius: 20px;
+  padding: 10px;
+  height: 15em;
+  background-color: #928166;
+
 }
 
-h3 { 
+h3 {
   color: #4A2E24;
   text-decoration: none;
-  font-weight:400;
+  font-weight: 400;
   font-size: 24px;
- 
+
 }
 
-.dash_1 h1{
+.dash_1 h1 {
   display: flex;
   justify-content: center;
-   
-  font-weight:500;
+
+  font-weight: 500;
   font-size: 40px;
 }
 
 .grafico {
-    width: 35em;
-    height: 20em;
-    background-color: #B8A68A;
-    border-radius: 20px;
+  width: 35em;
+  height: 20em;
+  background-color: #B8A68A;
+  border-radius: 20px;
 }
 
 /* PAGINA DOS GRÁFICOS 2023 */
@@ -506,7 +506,7 @@ h3 {
 .janela {
   display: flex;
   background-color: #B8A68A;
- height: calc(100vh - 70px);
+  height: calc(100vh - 70px);
 }
 
 
@@ -532,7 +532,7 @@ h3 {
   background-color: #F3E5D7;
 }
 
-*/ 
+*/
 
 /*
 .dash-right {
@@ -551,7 +551,8 @@ h3 {
 
 .header-left {
   position: fixed;
-  top: 70px; /* altura da navbar */
+  top: 70px;
+  /* altura da navbar */
   left: 0;
   width: 17%;
   height: calc(100vh - 70px);
@@ -569,7 +570,7 @@ h3 {
 
 .dash-right {
   margin-left: 17%;
-  
+
 
   width: 83%;
   min-height: calc(100vh - 70px);
@@ -708,7 +709,7 @@ h3 {
 
 .paragrafo_final {
   font-size: 16px;
- 
+
 }
 
 .graficos {
@@ -718,6 +719,6 @@ h3 {
 
 .grafico {
   box-sizing: border-box;
-    height: 280px;
-    width: 560px;
+  height: 280px;
+  width: 560px;
 }

@@ -37,7 +37,7 @@
                         <div class="opcao"><input type="radio" name="alternativa" id="D1" value="D">
                             <label for="D">“Protejo essa pessoa, independentemente das consequências.”</label>
                         </div>
-                        <div class="div_btn_enviar" ><button type="submit" id="estilo_btn">Enviar</button></div>
+                        <div class="div_btn_enviar"><button type="submit" id="estilo_btn">Enviar</button></div>
 
                     </fieldset>
                 </form>
@@ -115,7 +115,7 @@
                             <input type="radio" name="alternativa" id="D3" value="D">
                             <label for="D">“Voltaria no tempo para salvar alguém importante para mim.”</label>
                         </div>
-                        <div class="div_btn_enviar" > <button type="submit" id="estilo_btn">Enviar</button>
+                        <div class="div_btn_enviar"> <button type="submit" id="estilo_btn">Enviar</button>
                         </div>
 
                     </fieldset>
@@ -190,7 +190,8 @@
                             </div>
                             <div class="opcao_finalB">
                                 <input type="radio" name="alternativa" id="Razao" value="B">
-                                <label for="B" class="label_razao">“Seguir em frente aceitando a ordem natural das coisas.”</label>
+                                <label for="B" class="label_razao">“Seguir em frente aceitando a ordem natural das
+                                    coisas.”</label>
                             </div>
                         </div>
                         <div class="div_btn_enviar">
@@ -397,27 +398,5 @@
 
     }
 
-    /*
-    function responder(pergunta,alternativa) {
-    
-        respostas.push({
-            fkPergunta:pergunta,
-            fkAlternativa: alternativa
-        })
-    
-         fetch("/quiz/responder", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            // crie um atributo que recebe o valor recuperado aqui
-            // Agora vá para o arquivo routes/usuario.js
-            fkUsuario: sessionStorage.ID_USUARIO,
-            respostas: respostas
-            // idEmpresaVincularServer: idEmpresaVincular
-          }),
-        })
-    }
-    */
+
 </script>
