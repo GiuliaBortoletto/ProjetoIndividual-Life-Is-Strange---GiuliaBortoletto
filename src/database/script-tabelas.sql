@@ -12,7 +12,9 @@ CREATE DATABASE projetoPessoal;
 
 USE projetoPessoal;
 
-GRANT ALL PRIVILEGES ON projetopessoal.* TO 'usuario'@'%';
+CREATE USER 'teste'@'%' IDENTIFIED BY 'Teste#2026';
+
+GRANT ALL PRIVILEGES ON projetopessoal.* TO 'teste'@'%';
 FLUSH PRIVILEGES;
 
 CREATE TABLE usuario (

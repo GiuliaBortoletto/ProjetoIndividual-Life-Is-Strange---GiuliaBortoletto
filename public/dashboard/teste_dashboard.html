@@ -13,10 +13,7 @@
 
 <body onload="obterDados()">
     <div>
-        <!-- Elemento canvas onde o gráfico de linha será desenhado -->
-        <!--<canvas id="linha"></canvas>-->
-        <!-- Elemento canvas onde o gráfico de barra será desenhado -->
-     
+       
     </div>
 
     <header>
@@ -67,7 +64,7 @@
         </div>
 
         <div class="dash_1">
-            <h3>Esta é a sua dashboard personalisada corespondente a suas escolhas no login..</h3>
+            <h3>Esta é a sua dashboard personalizada corespondente a suas escolhas no login..</h3>
             <h1>Dashboard</h1>
             <div id="alerta">
             </div>
@@ -82,6 +79,10 @@
         <p>Você toma decisões mais: </p>
         <div id="kpi_tendencia"class="KPI"></div>
     </div>
+     <div class="div_filho_kpi_global" id="div_filho_kpi_global">
+        <p> Escolheram a opção final igual a sua: </p>
+        <div id="kpi_final"class="KPI_global"></div>
+    </div>
 </div>
 <div class="div-pai" >
     <div class="div-filho">
@@ -91,9 +92,7 @@
         <canvas id="barra"class="grafico"></canvas>
     </div>
 </div>
-            <!--<canvas id="linha" class="grafico"></canvas>-->    
-                
-                
+       
            
         </div>
     </div>
@@ -116,67 +115,17 @@
          .then(function(data){
           plotarGraficoPizza(data);
            plotarGraficoBarra(data);
-
+            
            exibirKPI(data);
          })
          .catch(function(erro){
            console.log(erro);
-         })
+         });
 
-        // Como eu não configurei as rotas, eu criei um array com os dados para simular a obtenção dos dados
-       /* var dadosTendencia = [{
-            Emotivo: 4,
-            Racional: 1
-        }]
-        var dadosEmocao = [{
-            Justica: 2,
-            Empatia: 1,
-            Coragem: 1,
-            Lealdade: 1
-        }]
-            */
-
-        // Chamando a função para plotar o gráfico de linha com os dados
-        //plotarGraficoLinha(dados);
-        // Chamando a função para plotar o gráfico de barra com os dados
-       // plotarGraficoBarra(dadosTendencia)
-       // plotarGraficoPizza(dadosEmocao)
+         exibirKPIFinal();
+    
     }
-    /*
-    // Função para plotar o gráfico de linha
-    function plotarGraficoLinha(dados){
-      
-      // Separando os rótulos (labels) e os dados dos votos
-      var votos = [];
-      var jogadores = [];
     
-      // Preenchendo os arrays com os dados
-      for(var i = 0; i < dados.length; i++){
-        votos.push(dados[i].votos);
-        jogadores.push(dados[i].jogador);
-      }
-    
-      // Capturando o elemento canvas pelo id 
-      var ctx = document.getElementById('linha').getContext('2d');
-      // Criando o gráfico de linha usando o Chart.js
-      var myChart = new Chart(ctx, {
-          type: 'line', // Tipo de gráfico: linha
-          data: { // Dados para o gráfico
-              labels: jogadores, // Rótulos no eixo X
-              datasets: [{ 
-                  label: 'Votos', // Nome do conjunto de dados
-                  data: votos, // Dados dos votos
-                  backgroundColor: [
-                      'rgba(255, 99, 132, 0.2)', // Cor de fundo das linhas
-                  ],
-                  borderColor: [
-                      'rgba(255, 99, 132, 1)', // Cor da borda das linhas
-                  ],
-                  borderWidth: 1 // Largura da borda das linhas
-              }]
-          },
-      });
-    } */
 
     // Função para plotar o gráfico de barra
     function plotarGraficoBarra(dados) {
@@ -196,7 +145,7 @@
             data: { // Dados para o gráfico
                 labels: ['Racional', 'Emotivo'], // Rótulos no eixo X
                 datasets: [{
-                    label: 'Tendencias', // Nome do conjunto de dados
+                    label: 'Suas tendencias com base no quiz', // Nome do conjunto de dados
                     data: [dados[0].Racional, dados[0].Emotivo],
                     backgroundColor: [
                       '#232a8ca8','#932a2ad2 ' // Cor de fundo das linhas
@@ -213,7 +162,7 @@
             data: {
                 labels: ['Empatia', 'Lealdade', 'Justiça', 'Coragem'],
                 datasets: [{
-                    label: 'Pontuação', // Nome do conjunto de dados
+                    label: 'Suas emoções com base no quiz', // Nome do conjunto de dados
                     data: [dados[0].Empatia, dados[0].Lealdade, dados[0].Justica, dados[0].Coragem], // Dados dos votos
                     backgroundColor: [
                       '#eb9b11dd','#2e4723dd','#1e7fafdd','#66202add' // Cor de fundo das linhas
@@ -275,5 +224,27 @@
 
 
     }
+
+    function exibirKPIFinal() {
+
+    fetch(`/dashboard/kpiFinal/${sessionStorage.ID_USUARIO}`)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(dados){
+        
+        console.log(dados);
+        var iguais = dados[0].iguais;
+        var total = dados[0].total;
+        var porcentagem = (iguais/total) * 100;
+
+        kpi_final.innerHTML = `${porcentagem.toFixed(0)}%`;
+
+    })
+    .catch(function(erro){
+        console.log(erro);
+    });
+
+}
 
 </script>

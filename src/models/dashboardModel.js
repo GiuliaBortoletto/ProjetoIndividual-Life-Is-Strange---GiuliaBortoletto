@@ -1,7 +1,7 @@
 var database = require("../database/config");
 
 function buscarDadosDashboard(idUsuario) {
-    var instrucaoSql = `
+      var instrucaoSql = `
     SELECT
      SUM(CASE
         WHEN tendencia = 'Emotivo' THEN pontosTendencia ELSE 0 END
@@ -24,10 +24,10 @@ function buscarDadosDashboard(idUsuario) {
        FROM resposta r JOIN alternativa a ON r.fkAlternativa = a.id
             WHERE r.fkUsuario = ${idUsuario}; 
     `
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-        return database.executar(instrucaoSql);
-    
-} 
+      console.log("Executando a instrução SQL: \n" + instrucaoSql);
+      return database.executar(instrucaoSql);
+
+}
 
 function buscarFinal(idUsuario) {
       var instrucaoSql = `
@@ -39,10 +39,34 @@ function buscarFinal(idUsuario) {
       LIMIT 1;
       `
       console.log("Executando a instrução SQL: \n" + instrucaoSql);
-        return database.executar(instrucaoSql);
+      return database.executar(instrucaoSql);
 }
 
-     module.exports = {
-    buscarDadosDashboard,
-    buscarFinal
+function buscarKpiFinal(idUsuario) {
+      var instrucaoSql = `
+      SELECT 
+      COUNT(*) AS iguais,
+      (SELECT COUNT(*)
+      FROM resposta
+      WHERE fkPergunta = 5) 
+      AS total
+      FROM resposta
+      WHERE fkPergunta = 5
+      AND fkAlternativa = (
+      SELECT fkAlternativa
+      FROM resposta
+      WHERE fkUsuario = ${idUsuario}
+      AND fkPergunta = 5
+      ORDER BY id DESC
+      LIMIT 1
+      );`
+
+      console.log("Executando a instrução SQL: \n" + instrucaoSql);
+      return database.executar(instrucaoSql);
+}
+
+module.exports = {
+      buscarDadosDashboard,
+      buscarFinal,
+      buscarKpiFinal
 }

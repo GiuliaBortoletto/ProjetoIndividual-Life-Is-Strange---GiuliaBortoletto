@@ -1,412 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="./css/perguntas.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life is Strange | Perguntas</title>
 </head>
+
 <body>
     <section class="sessao_perguntas" id="tela_1" style="display: flex;">
         <header>
-        <h1 class="titulo_header">Para finalizar o seu cadastro..</h1>
-        <h3>nos conte um pouco sobre você</h3>
-    </header>
-    <main id="main_1">
-        <div class="div_pergunta">
-        <h1 class="titulo_pergunta">1°Pergunta</h1>
-        <h3 class="pergunta">Você descobre que uma pessoa muito próxima cometeu <br>um erro grave que pode prejudicar outras pessoas<br>
-        Ninguém além de você sabe da verdade.</h3>
-        </div>
-        <div class="div_opções">
-            <form action="" method="post" onsubmit="return avancar()">
-                <fieldset>
+            <h1 class="titulo_header">Para finalizar o seu cadastro..</h1>
+            <h3>nos conte um pouco sobre você</h3>
+        </header>
+        <main id="main_1">
+            <div class="div_pergunta">
+                <h1 class="titulo_pergunta">1°Pergunta</h1>
+                <h3 class="pergunta">Você descobre que uma pessoa muito próxima cometeu <br>um erro grave que pode
+                    prejudicar outras pessoas<br>
+                    Ninguém além de você sabe da verdade.</h3>
+            </div>
+            <div class="div_opções">
+                <form action="" method="post" onsubmit="return avancar()">
+                    <fieldset>
 
-            <div class="opcao"><input type="radio" name="alternativa" id="A1" value="A">
-            <label for="A">“Converso com ela antes de qualquer decisão.”</label>
-            </div>
-            <div class="opcao"><input type="radio" name="alternativa" id="B1" value="B">
-            <label for="B">“Assumo o risco e exponho tudo imediatamente.”</label>
-            </div>
-            <div class="opcao"><input type="radio" name="alternativa" id="C1" value="C">
-            <label for="C">“A verdade deve aparecer, mesmo que machuque alguém.”</label>
-            </div>
-            <div class="opcao"><input type="radio" name="alternativa" id="D1" value="D">
-            <label for="D">“Protejo essa pessoa, independentemente das consequências.”</label>
-            </div>
-            <div class="div_btn_enviar"><button type="submit" >Enviar</button></div>
-         
-        </fieldset>    
-        </form>
-        </div>
-    </main>
-</section>
+                        <div class="opcao"><input type="radio" name="alternativa" id="A1" value="A">
+                            <label for="A">“Converso com ela antes de qualquer decisão.”</label>
+                        </div>
+                        <div class="opcao"><input type="radio" name="alternativa" id="B1" value="B">
+                            <label for="B">“Assumo o risco e exponho tudo imediatamente.”</label>
+                        </div>
+                        <div class="opcao"><input type="radio" name="alternativa" id="C1" value="C">
+                            <label for="C">“A verdade deve aparecer, mesmo que machuque alguém.”</label>
+                        </div>
+                        <div class="opcao"><input type="radio" name="alternativa" id="D1" value="D">
+                            <label for="D">“Protejo essa pessoa, independentemente das consequências.”</label>
+                        </div>
+                        <div class="div_btn_enviar" ><button type="submit" id="estilo_btn">Enviar</button></div>
 
-<section class="sessao_perguntas" id="tela_2" style="display: none;">
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+    </section>
+
+    <section class="sessao_perguntas" id="tela_2" style="display: none;">
         <header>
-        <h1 class="titulo_header">Para finalizar o seu cadastro..</h1>
-        <h3>nos conte um pouco sobre você</h3>
-    </header>
-    <main id="main_2" >
-        <div class="div_pergunta">
-        <h1 class="titulo_pergunta">2°Pergunta</h1>
-        <h3 class="pergunta">Você pode impedir algo ruim de acontecer , mas isso<br> custará uma amizade importante para você.</h3>
-        </div>
-        <div class="div_opções">
-            <form action="" method="post" onsubmit="return avancar()">
-                <fieldset>
-            <div class="opcao"> 
-            <input type="radio" name="alternativa" id="A2" value="A">
-            <label for="A">“Tento encontrar uma solução onde ninguém saia ferido.”</label>
+            <h1 class="titulo_header">Para finalizar o seu cadastro..</h1>
+            <h3>nos conte um pouco sobre você</h3>
+        </header>
+        <main id="main_2">
+            <div class="div_pergunta">
+                <h1 class="titulo_pergunta">2°Pergunta</h1>
+                <h3 class="pergunta">Você pode impedir algo ruim de acontecer , mas isso<br> custará uma amizade
+                    importante para você.</h3>
             </div>
-            <div class="opcao">
-            <input type="radio" name="alternativa" id="B2" value="B">
-            <label for="B">“Aceito perder essa amizade para fazer o que precisa ser feito.”</label>
-            </div>
-            <div class="opcao">
-            <input type="radio" name="alternativa" id="C2" value="C">
-            <label for="C">“Alguns sacrifícios são necessários pelo bem maior.”</label>
-            </div>
-            <div class="opcao">
-            <input type="radio" name="alternativa" id="D2" value="D">
-            <label for="D">“Uma amizade verdadeira vale mais que qualquer consequência.”</label>
-        </div>
-           <div class="div_btn_enviar">
-            <button type="submit" >Enviar</button>
-        </div>
-         
-        </fieldset>    
-        </form>
-        </div>
-    </main>
-</section>
+            <div class="div_opções">
+                <form action="" method="post" onsubmit="return avancar()">
+                    <fieldset>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="A2" value="A">
+                            <label for="A">“Tento encontrar uma solução onde ninguém saia ferido.”</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="B2" value="B">
+                            <label for="B">“Aceito perder essa amizade para fazer o que precisa ser feito.”</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="C2" value="C">
+                            <label for="C">“Alguns sacrifícios são necessários pelo bem maior.”</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="D2" value="D">
+                            <label for="D">“Uma amizade verdadeira vale mais que qualquer consequência.”</label>
+                        </div>
+                        <div class="div_btn_enviar">
+                            <button type="submit" id="estilo_btn">Enviar</button>
+                        </div>
 
-<section class="sessao_perguntas" id="tela_3" style="display: none;">
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+    </section>
+
+    <section class="sessao_perguntas" id="tela_3" style="display: none;">
         <header>
-        <h1 class="titulo_header">Para finalizar o seu cadastro..</h1>
-        <h3>nos conte um pouco sobre você</h3>
-    </header>
-    <main id="main_3" >
-        <div class="div_pergunta">
-        <h1 class="titulo_pergunta">3°Pergunta</h1>
-        <h3 class="pergunta">Você recebe a chance de voltar no tempo e corrigir um <br>erro do passado. Porém, mudar isso pode afetar a vida de <br>outras pessoas.</h3>
-        </div>
-        <div class="div_opções">
-            <form action="" method="post" onsubmit="return avancar()">
-                <fieldset>
-            <div class="opcao"> 
-            <input type="radio" name="alternativa" id="A3" value="A">
-            <label for="A">“Pensaria primeiro em como isso afetaria todos ao meu redor.”</label>
+            <h1 class="titulo_header">Para finalizar o seu cadastro..</h1>
+            <h3>nos conte um pouco sobre você</h3>
+        </header>
+        <main id="main_3">
+            <div class="div_pergunta">
+                <h1 class="titulo_pergunta">3°Pergunta</h1>
+                <h3 class="pergunta">Você recebe a chance de voltar no tempo e corrigir um <br>erro do passado. Porém,
+                    mudar isso pode afetar a vida de <br>outras pessoas.</h3>
             </div>
-            <div class="opcao">
-            <input type="radio" name="alternativa" id="B3" value="B">
-            <label for="B">“Mesmo com riscos, eu tentaria mudar o passado.”</label>
+            <div class="div_opções">
+                <form action="" method="post" onsubmit="return avancar()">
+                    <fieldset>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="A3" value="A">
+                            <label for="A">“Pensaria primeiro em como isso afetaria todos ao meu redor.”</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="B3" value="B">
+                            <label for="B">“Mesmo com riscos, eu tentaria mudar o passado.”</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="C3" value="C">
+                            <label for="C">“Algumas coisas não devem ser alteradas.”</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="D3" value="D">
+                            <label for="D">“Voltaria no tempo para salvar alguém importante para mim.”</label>
+                        </div>
+                        <div class="div_btn_enviar" > <button type="submit" id="estilo_btn">Enviar</button>
+                        </div>
+
+                    </fieldset>
+                </form>
             </div>
-            <div class="opcao">
-            <input type="radio" name="alternativa" id="C3" value="C">
-            <label for="C">“Algumas coisas não devem ser alteradas.”</label>
-            </div>
-            <div class="opcao">
-            <input type="radio" name="alternativa" id="D3" value="D">
-            <label for="D">“Voltaria no tempo para salvar alguém importante para mim.”</label>
-        </div>
-           <div class="div_btn_enviar">
-            <button type="submit" >Enviar</button>
-        </div>
-         
-        </fieldset>    
-        </form>
-        </div>
-    </main>
-</section>
+        </main>
+    </section>
 
 
-<section class="sessao_perguntas" id="tela_4" style="display: none;">
+    <section class="sessao_perguntas" id="tela_4" style="display: none;">
         <header>
-        <h1 class="titulo_header">Para finalizar o seu cadastro..</h1>
-        <h3>nos conte um pouco sobre você</h3>
-    </header>
-    <main id="main_4" >
-        <div class="div_pergunta">
-        <h1 class="titulo_pergunta">4°Pergunta</h1>
-        <h3 class="pergunta">Seus poderes possibilitam você a salvar a pessoa que você mais ama da <br>morte.. mas isso significa destruir a ordem natural das coisas.. <br><br>
+            <h1 class="titulo_header">Para finalizar o seu cadastro..</h1>
+            <h3>nos conte um pouco sobre você</h3>
+        </header>
+        <main id="main_4">
+            <div class="div_pergunta">
+                <h1 class="titulo_pergunta">4°Pergunta</h1>
+                <h3 class="pergunta">Seus poderes possibilitam você a salvar a pessoa que você mais ama da <br>morte..
+                    mas isso significa destruir a ordem natural das coisas.. <br>
+                    (saiba que sem a sua habilidade essa pessoa morreria de qualquer jeito).<br><br>
 
-1° Salvar a pessoa que você ama sabendo que outras pessoas irão morrer. <br>
-2° Deixar a pessoa partir e tentar seguir em frente com outras pessoas.</h3>
-        </div>
-        <div class="div_opções">
-            <form action="" method="post" onsubmit="return avancar()">
-                <fieldset>
-            <div class="opcao"> 
-            <input type="radio" name="alternativa" id="A4" value="A">
-            <label for="A">“Eu sofreria tentando encontrar outra alternativa.”</label>
+                    1° Salvar a pessoa que você ama sabendo que outras pessoas irão morrer. <br>
+                    2° Deixar a pessoa partir e tentar seguir em frente com as outras pessoas.</h3>
             </div>
-            <div class="opcao">
-            <input type="radio" name="alternativa" id="B4" value="B">
-            <label for="B">“Tomaria a decisão mais difícil sem hesitar.”</label>
-            </div>
-            <div class="opcao">
-            <input type="radio" name="alternativa" id="C4" value="C">
-            <label for="C">“O bem coletivo deve vir primeiro.”</label>
-            </div>
-            <div class="opcao">
-            <input type="radio" name="alternativa" id="D4" value="D">
-            <label for="D">“Eu jamais abandonaria quem amo.”</label>
-        </div>
-           <div class="div_btn_enviar">
-            <button type="submit" >Enviar</button>
-        </div>
-         
-        </fieldset>    
-        </form>
-        </div>
-    </main>
-</section>
+            <div class="div_opções">
+                <form action="" method="post" onsubmit="return avancar()">
+                    <fieldset>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="A4" value="A">
+                            <label for="A">“ Deixaria a pessoa decidir por mim.”</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="B4" value="B">
+                            <label for="B">“Tomaria a decisão de salvar as outras pessoas.”</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="C4" value="C">
+                            <label for="C">“Eu sofreria tentando encontrar outra alternativa.”</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" name="alternativa" id="D4" value="D">
+                            <label for="D">“Eu jamais abandonaria quem amo.”</label>
+                        </div>
+                        <div class="div_btn_enviar">
+                            <button type="submit" id="estilo_btn">Enviar</button>
+                        </div>
 
-<section class="sessao_perguntas" id="tela_5" style="display: none;">
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+    </section>
+
+    <section class="sessao_perguntas" id="tela_5" style="display: none;">
         <header>
-        <h1 class="titulo_header">Escolhas Dificeis</h1>
-        <h3>No final parece facil...</h3>
-    </header>
-    <main id="main_5" >
-        <div class="div_pergunta">
-        <h1 class="titulo_pergunta"></h1>
-        <h3 class="pergunta">Mas você parou mesmo para pensar sobre a sua ultima resposta?</h3>
-        </div>
-        <div class="div_opções_finais">
-            <form action="" method="post" onsubmit="return avancar()">
-                <fieldset class="pergunta_final">
+            <h1 class="titulo_header">Escolhas Dificeis</h1>
+            <h3>No final parece facil...</h3>
+        </header>
+        <main id="main_5">
+            <div class="div_pergunta">
+                <h1 class="titulo_pergunta"></h1>
+                <h3 class="pergunta_decisiva">Mas você parou mesmo para pensar sobre a sua ultima resposta?</h3>
+            </div>
+            <div class="div_opções_finais">
+                <form action="" method="post" onsubmit="return avancar()">
+                    <fieldset class="pergunta_final">
 
-                <div class="opcoes_finais">
-            <div class="opcao_finalA"> 
-            <input type="radio" name="alternativa" id="Emocao" value="A">
-            <label for="A" class="label_emocao">“Escolho salvar a pessoa que mais amo.”</label>
+                        <div class="opcoes_finais">
+                            <div class="opcao_finalA">
+                                <input type="radio" name="alternativa" id="Emocao" value="A">
+                                <label for="A" class="label_emocao">“Escolho salvar a pessoa que mais amo.”</label>
+                            </div>
+                            <div class="opcao_finalB">
+                                <input type="radio" name="alternativa" id="Razao" value="B">
+                                <label for="B" class="label_razao">“Seguir em frente aceitando a ordem natural das coisas.”</label>
+                            </div>
+                        </div>
+                        <div class="div_btn_enviar">
+                            <button type="submit" id="estilo_btn">Enviar</button>
+                        </div>
+
+                    </fieldset>
+                </form>
             </div>
-            <div class="opcao_finalB">
-            <input type="radio" name="alternativa" id="Razao" value="B">
-            <label for="B" class="label_razao">“Tomaria a decisão mais difícil sem hesitar.”</label>
-            </div>
-                </div>
-           <div class="div_btn_enviar">
-            <button type="submit" >Enviar</button>
-        </div>
-         
-        </fieldset>    
-        </form>
-        </div>
-    </main>
-</section>
-    
+        </main>
+    </section>
+
 </body>
+
 </html>
 <script>
 
-let respostas = [];
+    let respostas = [];
 
-function avancar() {
-    let erros = false;
+    function avancar() {
+        let erros = false;
 
-    if(tela_1.style.display == 'flex') { 
+        if (tela_1.style.display == 'flex') {
 
-        let alternativa = 0;
-        if(A1.checked) {
-            alternativa = 1;
-        } 
-        else if (B1.checked) {
-            alternativa = 2;
-        }
-        else if (C1.checked) {
-            alternativa = 3;
-        }
-        else if (D1.checked) {
-            alternativa = 4;
-        } else {
-            alert('Selecione uma das alternativas!');
-            erros = true;
-        }
+            let alternativa = 0;
+            if (A1.checked) {
+                alternativa = 1;
+            }
+            else if (B1.checked) {
+                alternativa = 2;
+            }
+            else if (C1.checked) {
+                alternativa = 3;
+            }
+            else if (D1.checked) {
+                alternativa = 4;
+            } else {
+                alert('Selecione uma das alternativas!');
+                erros = true;
+            }
 
-        if(erros == false) {
-        respostas.push({
-        fkPergunta: 1,
-        fkAlternativa: alternativa
-    })
-        }
-        console.log(respostas);
-      
-    tela_1.style.display = 'none';
-     tela_2.style.display = 'flex';
-     return false;}
-   
-     if(tela_2.style.display == 'flex') { 
+            if (erros == false) {
+                respostas.push({
+                    fkPergunta: 1,
+                    fkAlternativa: alternativa
+                })
+            }
+            console.log(respostas);
 
- let alternativa = 0;
-        if(A2.checked) {
-            alternativa = 5;
-        } 
-        else if (B2.checked) {
-            alternativa = 6;
-        }
-        else if (C2.checked) {
-            alternativa = 7;
-        }
-        else if (D2.checked) {
-            alternativa = 8;
-        } else {
-            alert('Selecione uma das alternativas!');
-            erros = true;
+            tela_1.style.display = 'none';
+            tela_2.style.display = 'flex';
+            return false;
         }
 
-        if(erros == false) {
-        respostas.push({
-        fkPergunta:2,
-        fkAlternativa: alternativa
-    })
-     console.log(respostas);
+        if (tela_2.style.display == 'flex') {
+
+            let alternativa = 0;
+            if (A2.checked) {
+                alternativa = 5;
+            }
+            else if (B2.checked) {
+                alternativa = 6;
+            }
+            else if (C2.checked) {
+                alternativa = 7;
+            }
+            else if (D2.checked) {
+                alternativa = 8;
+            } else {
+                alert('Selecione uma das alternativas!');
+                erros = true;
+            }
+
+            if (erros == false) {
+                respostas.push({
+                    fkPergunta: 2,
+                    fkAlternativa: alternativa
+                })
+                console.log(respostas);
+            }
+
+
+            tela_2.style.display = 'none';
+            tela_3.style.display = 'flex';
+            return false;
         }
 
+        if (tela_3.style.display == 'flex') {
 
-    tela_2.style.display = 'none';
-     tela_3.style.display = 'flex';
-     return false;}   
+            let alternativa = 0;
+            if (A3.checked) {
+                alternativa = 9;
+            }
+            else if (B3.checked) {
+                alternativa = 10;
+            }
+            else if (C3.checked) {
+                alternativa = 11;
+            }
+            else if (D3.checked) {
+                alternativa = 12;
+            } else {
+                alert('Selecione uma das alternativas!');
+                erros = true;
+            }
 
-     if(tela_3.style.display == 'flex') { 
+            if (erros == false) {
+                respostas.push({
+                    fkPergunta: 3,
+                    fkAlternativa: alternativa
+                })
+                console.log(respostas);
+            }
 
- let alternativa = 0;
-        if(A3.checked) {
-            alternativa = 9;
-        } 
-        else if (B3.checked) {
-            alternativa = 10;
-        }
-        else if (C3.checked) {
-            alternativa = 11;
-        }
-        else if (D3.checked) {
-            alternativa = 12;
-        } else {
-            alert('Selecione uma das alternativas!');
-            erros = true;
-        }
-
-        if(erros == false) {
-        respostas.push({
-        fkPergunta:3,
-        fkAlternativa: alternativa
-    })
-     console.log(respostas);
-        }
-
-    tela_3.style.display = 'none';
-     tela_4.style.display = 'flex';
-     return false;}
-
-     if(tela_4.style.display == 'flex') { 
-
-         let alternativa = 0;
-        if(A4.checked) {
-            alternativa = 13;
-        } 
-        else if (B4.checked) {
-            alternativa = 14;
-        }
-        else if (C4.checked) {
-            alternativa = 15;
-        }
-        else if (D4.checked) {
-            alternativa = 16;
-        } else {
-            alert('Selecione uma das alternativas!');
-            erros = true;
+            tela_3.style.display = 'none';
+            tela_4.style.display = 'flex';
+            return false;
         }
 
-        if(erros == false) {
-        respostas.push({
-        fkPergunta:4,
-        fkAlternativa: alternativa
-    })
-     console.log(respostas);
+        if (tela_4.style.display == 'flex') {
+
+            let alternativa = 0;
+            if (A4.checked) {
+                alternativa = 13;
+            }
+            else if (B4.checked) {
+                alternativa = 14;
+            }
+            else if (C4.checked) {
+                alternativa = 15;
+            }
+            else if (D4.checked) {
+                alternativa = 16;
+            } else {
+                alert('Selecione uma das alternativas!');
+                erros = true;
+            }
+
+            if (erros == false) {
+                respostas.push({
+                    fkPergunta: 4,
+                    fkAlternativa: alternativa
+                })
+                console.log(respostas);
+            }
+
+            tela_4.style.display = 'none';
+            tela_5.style.display = 'flex';
+            return false;
         }
 
-    tela_4.style.display = 'none';
-     tela_5.style.display = 'flex';
-     return false;}
+        if (tela_5.style.display == 'flex') {
 
-      if(tela_5.style.display == 'flex') { 
+            let alternativa = 0;
+            if (Razao.checked) {
+                alternativa = 18;
+            }
+            else if (Emocao.checked) {
+                alternativa = 17;
+            }
+            else {
+                alert('Selecione uma das alternativas!');
+                erros = true;
+            }
 
-         let alternativa = 0;
-        if(Razao.checked) {
-            alternativa = 18;
-        } 
-        else if (Emocao.checked) {
-            alternativa = 17;
+            if (erros == false) {
+
+                respostas.push({
+                    fkPergunta: 5,
+                    fkAlternativa: alternativa
+                });
+
+                console.log(respostas);
+
+                console.log(sessionStorage.ID_USUARIO);
+
+                fetch("/quiz/responder", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        fkUsuario: sessionStorage.ID_USUARIO,
+                        respostas: respostas
+                    }),
+                })
+                    .then(function (resposta) {
+
+                        console.log("dados enviados");
+
+                        window.location = "./dashboard/cards.html";
+
+                    })
+                    .catch(function (erro) {
+
+                        console.log(erro);
+
+                    });
+
+            }
         }
-         else {
-            alert('Selecione uma das alternativas!');
-            erros = true;
-        }
+        return false;
 
-         if(erros == false) {
-
-        respostas.push({
-            fkPergunta: 5,
-            fkAlternativa: alternativa
-        });
-
-        console.log(respostas);
-
-        console.log(sessionStorage.ID_USUARIO);
-
-        fetch("/quiz/responder", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                fkUsuario: sessionStorage.ID_USUARIO,
-                respostas: respostas
-            }),
-        })
-        .then(function(resposta) {
-
-            console.log("dados enviados");
-
-            window.location = "./dashboard/cards.html";
-
-        })
-        .catch(function(erro) {
-
-            console.log(erro);
-
-        });
 
     }
-     }
-    return false;
-     
 
-}
-
-/*
-function responder(pergunta,alternativa) {
-
-    respostas.push({
-        fkPergunta:pergunta,
-        fkAlternativa: alternativa
-    })
-
-     fetch("/quiz/responder", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        fkUsuario: sessionStorage.ID_USUARIO,
-        respostas: respostas
-        // idEmpresaVincularServer: idEmpresaVincular
-      }),
-    })
-}
-*/
+    /*
+    function responder(pergunta,alternativa) {
+    
+        respostas.push({
+            fkPergunta:pergunta,
+            fkAlternativa: alternativa
+        })
+    
+         fetch("/quiz/responder", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            fkUsuario: sessionStorage.ID_USUARIO,
+            respostas: respostas
+            // idEmpresaVincularServer: idEmpresaVincular
+          }),
+        })
+    }
+    */
 </script>

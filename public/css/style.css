@@ -25,6 +25,7 @@ section {
     background-position: center;
     background-repeat: none;
     background-size: cover;
+    border-bottom: 10px solid #0e101d;
 }
 
 
@@ -327,17 +328,17 @@ section {
 
 .btn_sortear {
     width: 300px;
-    border: none;
     padding: 10px 0;
     background-color: #207cc8;
     color: white;
     font-size: 20px;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
 }
 
 .btn_sortear:hover {
-    background-color: #2a6cd5c1;
-    
+    background-color: #1863a1;
+    border: none;
     
 }
 
